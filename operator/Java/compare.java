@@ -1,11 +1,11 @@
 public class compare {
     public static void main(String[] args) {
-        intCompare();
         decCompare();
+        intCompare();
         strCompare();
         charCompare();
-    }
 
+    }
     public static void intCompare() {
         // Integer Comparison
         int a = 1;
