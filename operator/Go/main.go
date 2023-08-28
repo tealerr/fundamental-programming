@@ -6,6 +6,17 @@ import (
 )
 
 func main() {
+	fmt.Println("******** Below is Assignment Operator ********")
+	operators.Assignment()
+
+	fmt.Println("############## Other Assignment Operator ###############")
+	operators.OtherAssign()
+
+	fmt.Println("******** Below is Arithmetic Operator ********")
+	operators.NumberArithmetic()
+	operators.StringArithmetic()
+	operators.CharArithmetic()
+
 	fmt.Println("******** Below is Compare Operator ********")
 	operators.IntCompare()
 	operators.DecCompare()
@@ -13,8 +24,8 @@ func main() {
 	operators.CharCompare()
 
 	fmt.Println("******** Below is Logic Operator ********")
-	operators.LogicOr()
 	operators.LogicAnd()
+	operators.LogicOr()
 	operators.LogicNot()
 
 }
