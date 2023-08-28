@@ -15,7 +15,6 @@ func main() {
 	fmt.Println("******** Below is Arithmetic Operator ********")
 	operators.NumberArithmetic()
 	operators.StringArithmetic()
-	operators.CharArithmetic()
 
 	fmt.Println("******** Below is Compare Operator ********")
 	operators.IntCompare()

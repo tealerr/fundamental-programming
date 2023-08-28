@@ -24,7 +24,5 @@ public class arithmetic {
         System.out.println("b value is: " + b);
         System.out.println("fullName is: " + fullName);
 
-
-
     }
 }
