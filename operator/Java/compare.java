@@ -12,7 +12,7 @@ public class compare {
         int b = 2;
 
         // Output
-        System.out.println("#####################Integer#####################");
+        System.out.println("##################### Integer #####################");
         System.out.println("a == b is: " + (a == b));
         System.out.println("a != b is: " + (a != b));
         System.out.println("a > b is: " + (a > b));
@@ -28,7 +28,7 @@ public class compare {
         float b = 22.25f;
 
         //Output
-        System.out.println("#####################Decimal#####################");
+        System.out.println("##################### Decimal #####################");
         System.out.println("a == b is: " + (a == b));
         System.out.println("a != b is: " + (a != b));
         System.out.println("a > b is: " + (a > b));
@@ -43,7 +43,7 @@ public class compare {
         String b = "hello";
 
         //Output
-        System.out.println("#####################String#####################");
+        System.out.println("##################### String #####################");
         System.out.println("a == b is: " + (a == b));
         System.out.println("a != b is: " + (a != b));
     }
@@ -54,7 +54,7 @@ public class compare {
         char name2 = 'a';
         
         //Output
-        System.out.println("#####################Character#####################");
+        System.out.println("##################### Character #####################");
         System.out.println("name1 == name2 is: " + (name1 == name2));
         System.out.println("name1 != name2 is: " + (name1 != name2));
     }
