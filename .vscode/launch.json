@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "loop",
+      "request": "launch",
+      "mainClass": "loop.Java.loop",
+      "projectName": "fundamental-programming_aba9d68b"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
