@@ -5,6 +5,13 @@
       "type": "java",
       "name": "loop",
       "request": "launch",
+      "mainClass": "loop",
+      "projectName": "fundamental-programming_aba9d68b"
+    },
+    {
+      "type": "java",
+      "name": "loop",
+      "request": "launch",
       "mainClass": "loop.Java.loop",
       "projectName": "fundamental-programming_aba9d68b"
     },
