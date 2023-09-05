@@ -8,7 +8,7 @@ function forLoop() {
 
 // The For In Loop ใช้ในการวน loop คุณสมบัติของวัตถุ
 // for...in เป็นลูปที่ใช้ในการวนลูปผ่านคุณสมบัติ (properties) ของอ็อบเจกต์ (objects)
-// โดยทั่วไป for...in ใช้กับอ็อบเจกต์เท่านั้นและไม่ใช้กับอาร์เรย์.
+// โดยทั่วไป for...in ใช้กับอ็อบเจกต์เท่านั้น (object)
 function forInLoop() {
     var myCar = {
         brand: "BMW",
