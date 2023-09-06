@@ -57,6 +57,7 @@ void useElseIf(int score){
 }
 
 // variable = (condition) ? expressionTrue : expressionFalse;
+// เขียนในรูปแบบ short statement ในกรณีที่เงื่อนไขไม่ซับซ้อน basic
 void shortHandIf(int status){
 
     enum Status{
@@ -80,7 +81,7 @@ switch(expression) {
     // code block
 }*/
 
-// เปลี่ยนจากการคิดเกรดโดยใช้ if-else เป็น switch-case แทน
+// แสดงข้อความพร้อมเกรด โดยใช้ switch case
 void switchGrade(char grade){
     switch (grade) {
         case 'A':
