@@ -6,3 +6,13 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+/go.work
+
+/Java/
+/learnIf.class
+/loop.class
+
+/Java/operator/
+/compare.class
+/logic.class
