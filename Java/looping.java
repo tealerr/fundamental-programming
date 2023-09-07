@@ -1,46 +1,48 @@
-public class loop {
+public class condition {
     public static void main(String args[]){
         forLoop();
         forEachLoop();
         whileLoop();
         doWhileLoop();
-        breakAndCon();
+        breakAndContinue();
         forLength();
     }
 
-    //ทำงานในข
+    // ให้วน loop จนกว่าเงื่อนไขจะเป็นเท็จ
     public static void forLoop(){
-        for (int i = 1; i < 5; i++) {
-            System.out.println("Count at "+i);
+        for (int i = 1; i < 5; i++) { //กำหนดเงื่อนไข
+            System.out.println("Count at "+i); // ถ้าเงื่อนไขยังเป็นจริง ให้ทำงานตรงนี้ซ้ำ
         }
-            System.out.println("");    
+            System.out.println(""); //เว้นบรรทัด   
     }
 
+    //for-each ใช้สำหรับการวนลูปผ่านคอลเลกชัน (collections) เช่น array, map
     public static void forEachLoop(){
-        String[] country = {"Japan", "United States", "Thailand"};
+        String[] country = {"Japan", "United States", "Thailand"}; //สร้าง array เก็บชื่อประเทศ
 
         // วนค่าทั้งหมดใน country array และเก็บไว้ที่ตัวแปร i
-        for (String i : country) {
+        for (String i : country) { //วนค่าใน array จนครบทุกตัว
             System.out.println("My country is "+i); //แสดงค่าของสมาชิกใน array
           }
           System.out.println("");    
     }
 
-    //ทำงานในขณะที่เงื่อนไขเป็นจริง
+    // ทำงานในขณะที่เงื่อนไขเป็นจริง
     public static void whileLoop(){
         int i = 5;
-        while (i>=0 ){
-            System.out.println("while loop countdown "+i);
-            i--;
+        while (i>=0 ){ //กำหนดเงื่อนไข
+            System.out.println("while loop countdown "+i); //ถ้า i ยังไม่น้อยกว่า 0 ให้ทำงานบรรทัดนี้ซ้ำ
+            i--; //ลดค่า i รอบละ 1
         }
             System.out.println("");    
     }
 
+    // do-while การทำงานคล้ายกับ while
     public static void doWhileLoop(){
         int i = 1; 
-        do{
+        do{ // ภายใน do block จะมีคำสั่งให้ทำงาน
             System.out.println(i);  //print i ไปเรื่อยๆ
-            i++;
+            i++; //เพิ่มขึ้นครั้งละ 1
         }
         // ในขณะที่ i <5 (เงื่อนไขยังเป็นจริง)
         // ถ้า  i = 6 จะหยุดการทำงาน
@@ -49,7 +51,8 @@ public class loop {
 
     }
 
-    public static void breakAndCon(){
+    // function นี้ใช้เพื่อแสดงการใช้งานตัวแปร break และ continue
+    public static void breakAndContinue(){
         //นับ 1 ถึง 10
         System.out.println("Count 1 to 10 !");
 
@@ -63,7 +66,6 @@ public class loop {
         }
         System.out.println("");    
 
-        // 
         System.out.println("Count 1 to 5 !");
         int i = 1;
 
@@ -80,13 +82,15 @@ public class loop {
         System.out.println("");    
     }
 
+    // จะใช้งานคล้ายกับ for-each แต่จะต่างตรงที่ เมื่อวนสมาชิกใน array ต้องทำการเพิ่มเลข index ทุกรอบ
+    // คล้ายกับ loop พื้นฐาน กำหนดเงื่อนไขโดยใช้ .length ของ array นั้นๆ
     public static void forLength(){
         //สร้าง array ของยี่ห้อรถยนต์
         String[] cars = { "BMW", "Benz", "Ferrari", "Volvo"};
 
         System.out.println("Use for loop with my cars array");    
-        for(int i = 0; i < cars.length; i++){
-            System.out.println("i have "+cars[i]); //print สมาชิกออกมาทีละตัว 
+        for(int i = 0; i < cars.length; i++){ // กำหนดเงื่อนไข ให้วนสมาชิกของ array โดยเพิ่มเลข index ทีละ 1
+            System.out.println("i have "+cars[i]); //i แสดงถึงตำแหน่ง index ของ array ซึ่งจะชี้ไปที่ value
         }
     }
 }

@@ -9,10 +9,6 @@
 
 /go.work
 
-/Java/
-/learnIf.class
-/loop.class
-
-/Java/operator/
-/compare.class
-/logic.class
+# Ignore Java class file
+Java/loop.class
+Java/learnIf.class

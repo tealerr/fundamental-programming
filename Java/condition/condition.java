@@ -1,4 +1,5 @@
-public class learnIf {
+
+public class condition {
     public static void main(String[] args){
         //Calculate grade
         char score1 = gradeCal(82);
@@ -74,4 +75,13 @@ public class learnIf {
         }
     }
     
+}
+
+ 
+class testCondition {
+    @Test
+    public void TestWhenInputScore_80_ShouldReturn_A() {
+        char result = condition.gradeCal(80); // Call the method on an instance
+        assertEquals('A', result, "Expected 'A' for a score of 80");
+    }
 }
