@@ -4,14 +4,14 @@ using namespace std;
 void forLoop();
 void doWhileLoop();
 void whileLoop();
-void breakAndCon();
+void breakAndContinue();
 
 
 int main() {
     forLoop();
     whileLoop();
     doWhileLoop();
-    breakAndCon();
+    breakAndContinue();
 }
 
 void forLoop() {
@@ -43,7 +43,7 @@ void doWhileLoop() {
     std::cout << "\n";
 }
 
-void breakAndCon() {
+void breakAndContinue() {
     std::cout << "***** Use break \n";
     for (int i = 0; i < 5; i++) {
         if (i == 3) {

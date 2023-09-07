@@ -1,6 +1,7 @@
 package condition
 
 // สร้าง function เพื่อคำนวณเกรด
+// ใช้ if, else if โดยที่เกรด A ต้อง 80 ขึ้นไป, เกรด B ได้ระหว่าง 70-79, ต่ำกว่านั้น F
 func CalculateGrade(score int) rune {
 	var grade rune
 
@@ -15,6 +16,7 @@ func CalculateGrade(score int) rune {
 }
 
 // แสดงเกรด โดยใช้ switch case
+// รับอักขระของเกรดเข้ามา และ return ข้อความออกไป
 func ShowGrade(grade rune) string {
 	switch grade {
 	case 'A':
@@ -27,9 +29,11 @@ func ShowGrade(grade rune) string {
 
 }
 
+// เขียน if-else ในรูปแบบ short-statement
+// เป็น function ที่ใช้เพื่อเปิดปิดอุปกรณ์
 func IsActive(num int) string {
-	if num == 1 {
-		return "Device is On"
+	if num == 1 { // 1 แทนการเปิดเครื่อง
+		return "Device is On" //ถ้าเงื่อนไขเป็จริง จะเข้าการทำงานใน block นี้
 	}
-	return "Device is Off"
+	return "Device is Off" // ถ้าเป็น false จะทำงานตรงนี้
 }
