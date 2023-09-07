@@ -1,8 +1,8 @@
 package main
 
 import (
+	"basicLoop/operator/operators"
 	"fmt"
-	"goBasic/operators"
 )
 
 func main() {

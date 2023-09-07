@@ -2,11 +2,6 @@ package main
 
 import "fmt"
 
-func main() {
-	ImplicitDeclare()
-	ExplicitDeclare()
-}
-
 func ImplicitDeclare() {
 	//Implicit declare
 	myNum := 112
