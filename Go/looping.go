@@ -16,7 +16,7 @@ import "fmt"
 // 	breakAndCon()
 // }
 
-//This for loop
+// This for loop
 func forLoop() {
 	for i := 1; i < 5; i++ {
 		fmt.Println("This For loop ", i)
@@ -24,7 +24,7 @@ func forLoop() {
 	fmt.Println("")
 }
 
-//this while loop
+// this while loop
 func whileLoop() {
 	num := 1
 
@@ -67,14 +67,14 @@ func breakAndCon() {
 	fmt.Println("")
 }
 
-//shouldn't run, it infinity! อย่าหารัน เป็นตัวอย่างเฉยๆ
+// shouldn't run, it infinity! อย่าหารัน เป็นตัวอย่างเฉยๆ
 func forEver() {
 	for {
 		fmt.Println("Hello World!")
 	}
 }
 
-//ใช้ range กับ for loop เพื่อเช็คสมาชิกทั้งหมดใน array และ map
+// ใช้ range กับ for loop เพื่อเช็คสมาชิกทั้งหมดใน array และ map
 func rangeLoop() {
 	fmt.Println("******** For range Array ********")
 	// สร้าง slice ของ string
