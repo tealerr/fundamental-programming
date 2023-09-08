@@ -10,5 +10,10 @@
 /go.work
 
 # Ignore Java class file
-Java/loop.class
-Java/learnIf.class
+/Java/loop.class
+/Java/dataType.class
+/Java/condition/condition.class
+
+/.vscode/
+/out/production/fundamental-programming
+/fundamental-programming.iml

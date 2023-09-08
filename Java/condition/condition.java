@@ -1,3 +1,4 @@
+package condition;
 
 public class condition {
     public static void main(String[] args){
@@ -41,19 +42,6 @@ public class condition {
         System.out.println(result);    }
 
 
-    /*
-     switch(expression) {
-  case x:
-    // code block
-    break;
-  case y:
-    // code block
-    break;
-  default:
-    // code block
-}
-     */
-
     //ใช้ switch case เพื่อหาเกรดที่ตรงตามเคส และแสดงผลออกมา
     public static void showGrade(char grade) {
         switch (grade) {
@@ -75,13 +63,4 @@ public class condition {
         }
     }
     
-}
-
- 
-class testCondition {
-    @Test
-    public void TestWhenInputScore_80_ShouldReturn_A() {
-        char result = condition.gradeCal(80); // Call the method on an instance
-        assertEquals('A', result, "Expected 'A' for a score of 80");
-    }
 }

@@ -32,8 +32,8 @@ func TestWhenInputOtherScore_ShouldReturn_F(t *testing.T) {
 }
 
 func TestWhenGradeIs_A_shouldReturnMessageGrade_A(t *testing.T) {
-	result := ShowGrade('B')
-	expected := "Your grade is F"
+	result := ShowGrade('A')
+	expected := "Your grade is A"
 
 	if result != expected {
 		t.Errorf("Expected %s but got %s", expected, result)

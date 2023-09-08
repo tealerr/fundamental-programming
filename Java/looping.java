@@ -1,4 +1,4 @@
-public class condition {
+public class looping {
     public static void main(String args[]){
         forLoop();
         forEachLoop();

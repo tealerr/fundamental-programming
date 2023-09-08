@@ -1,11 +1,7 @@
 package condition;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import java.beans.Transient;
 
-public class testCondition{
+public class condition_test{
     @Test
-    public void TestWhenInputScore_80_ShouldReturn_A() {        
-        
-    }
 }
