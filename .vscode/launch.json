@@ -2,14 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Launch Java Program",
+      "request": "launch",
+      "mainClass": ""
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/theet/playground/fundamental-programming/C++",
-      "program": "c:/Users/theet/playground/fundamental-programming/C++/build/Debug/outDebug",
+      "cwd": "c:/Users/theet/playground/fundamental-programming/C++/operator",
+      "program": "c:/Users/theet/playground/fundamental-programming/C++/operator/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

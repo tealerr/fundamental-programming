@@ -11,10 +11,14 @@
 /.idea/vcs.xml
 
 # Ignore Java class file
-/Java/loop.class
-/Java/dataType.class
-/Java/condition/condition.class
+Java/loop.class
+Java/dataType.class
+Java/condition/condition.class
+Java/operator/compare.class
+Java/operator/logic.class
+Java/dataType.class
 
 .vscode/
-/out/production/fundamental-programming
-/fundamental-programming.iml
+out/production/fundamental-programming
+fundamental-programming.iml
+.clj-kondo/.cache/v1/

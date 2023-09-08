@@ -2,20 +2,6 @@ package main
 
 import "fmt"
 
-// func main() {
-// 	fmt.Println("####### For loop #######")
-// 	forLoop()
-
-// 	fmt.Println("####### While loop #######")
-// 	whileLoop()
-
-// 	fmt.Println("####### Range in for loop #######")
-// 	rangeLoop()
-
-// 	fmt.Println("####### Use break and continue in loop #######")
-// 	breakAndCon()
-// }
-
 // This for loop
 func forLoop() {
 	for i := 1; i < 5; i++ {

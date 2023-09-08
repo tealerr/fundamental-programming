@@ -1,28 +1,8 @@
 #include <iostream>
 using namespace std;
 
-char useIfElse(int score);
-void useElseIf(int score);
-void shortHandIf(int status);
-void switchGrade(char grade);
-
-int main()
-{
-    // calculate grade and return grade
-    char student1 = useIfElse(87); // A
-    char student2 = useIfElse(79); // F
-
-    // check device status
-    shortHandIf(0); // turn off device
-
-    // show grade output
-    switchGrade(student1);
-    switchGrade(student2);
-    return 0;
-}
-
 // สร้าง if เพื่อคำนวณเกรด
-char useIfElse(int score)
+char GradeCalWithIf(int score)
 {
     char grade;
     if (score >= 80)
@@ -36,8 +16,8 @@ char useIfElse(int score)
     return grade;
 }
 
-// ใช้ else-if เมื่อมีหลายเงื่อน
-void useElseIf(int score)
+// ใช้ else-if เมื่อมีหลายเงื่อนไข
+void GradeCalWithElseIf(int score)
 {
     char grade;
     if (score >= 80)
@@ -47,7 +27,7 @@ void useElseIf(int score)
     }
     else if (score >= 70 && score < 80) // ใช้ else if เมื่อมีเงื่อนไขต่อไปเรื่อยๆ
     {
-        grade = 'B+';
+        grade = 'B';
         std::cout << grade << std::endl;
     }
     else if (score >= 60 && score < 70)
@@ -64,9 +44,8 @@ void useElseIf(int score)
 
 // variable = (condition) ? expressionTrue : expressionFalse;
 // เขียนในรูปแบบ short statement ในกรณีที่เงื่อนไขไม่ซับซ้อน basic
-void shortHandIf(int status)
+void ShortHandIf(int status)
 {
-
     enum Status
     {
         TURN_ON = 1,
@@ -76,20 +55,8 @@ void shortHandIf(int status)
     cout << result;
 }
 
-/*
-switch(expression) {
-  case x:
-    // code block
-    break;
-  case y:
-    // code block
-    break;
-  default:
-    // code block
-}*/
-
 // แสดงข้อความพร้อมเกรด โดยใช้ switch case
-void switchGrade(char grade)
+void ShowGrade(char grade)
 {
     switch (grade)
     {
