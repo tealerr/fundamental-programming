@@ -8,6 +8,7 @@
 /dataSources.local.xml
 
 /go.work
+/.idea/vcs.xml
 
 # Ignore Java class file
 /Java/loop.class
