@@ -1,18 +1,5 @@
 function main() {
-
-    console.log("Inside main function");
-    NumberArithmetic();
+  console.log("Inside main function");
+  NumberArithmetic();
 }
-main()
-
-
-
-
-
-
-
-
-
-
-
-
+main();

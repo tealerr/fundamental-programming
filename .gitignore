@@ -7,18 +7,19 @@
 /dataSources/
 /dataSources.local.xml
 
-/go.work
-/.idea/vcs.xml
+go.work
+.idea/
 
 # Ignore Java class file
-Java/loop.class
-Java/dataType.class
-Java/condition/condition.class
-Java/operator/compare.class
-Java/operator/logic.class
-Java/dataType.class
+Java/*.class
+Java/condition/*.class
+Java/operator/*.class
 
 .vscode/
 out/production/fundamental-programming
 fundamental-programming.iml
 .clj-kondo/.cache/v1/
+
+go.work
+go.work.sum
+fundamental-programming.iml

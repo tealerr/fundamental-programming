@@ -6,47 +6,53 @@ void doWhileLoop();
 void whileLoop();
 void breakAndContinue();
 
-
-int main() {
+int main()
+{
     forLoop();
     whileLoop();
     doWhileLoop();
     breakAndContinue();
 }
 
-void forLoop() {
-    for (int i = 0; i < 5; i++) {
+void forLoop()
+{
+    for (int i = 0; i < 5; i++)
+    {
         std::cout << "While count is " << i << std::endl;
     }
     std::cout << "\n";
-
 }
 
-void whileLoop() {
+void whileLoop()
+{
     int num = 1;
-    while (num <= 5) {
+    while (num <= 5)
+    {
         std::cout << "While count is " << num << std::endl;
         num++;
     }
     std::cout << "\n";
-
-
 }
 
-void doWhileLoop() {
+void doWhileLoop()
+{
     int num = 1;
 
-    do {
+    do
+    {
         std::cout << "Do-while count is " << num << std::endl;
         num++;
     } while (num <= 5);
     std::cout << "\n";
 }
 
-void breakAndContinue() {
+void breakAndContinue()
+{
     std::cout << "***** Use break \n";
-    for (int i = 0; i < 5; i++) {
-        if (i == 3) {
+    for (int i = 0; i < 5; i++)
+    {
+        if (i == 3)
+        {
             std::cout << "pls break!!! \n";
             break;
         }
@@ -57,8 +63,10 @@ void breakAndContinue() {
     std::cout << "***** Use continue \n";
 
     int num = 1;
-    while (num <= 6) {
-        if (num == 4) {
+    while (num <= 6)
+    {
+        if (num == 4)
+        {
             std::cout << "skip this! \n";
             num++;
             continue;
@@ -67,5 +75,4 @@ void breakAndContinue() {
         std::cout << "Count is " << num << std::endl;
         num++;
     }
-
 }
