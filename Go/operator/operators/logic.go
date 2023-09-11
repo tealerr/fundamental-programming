@@ -8,9 +8,9 @@ func LogicAnd() {
 
 	fmt.Println("##################### Logic AND #####################")
 	if a >= 1 && b <= 2 {
-		fmt.Println("Hello World")
+		fmt.Println("True AND logic")
 	} else {
-		fmt.Println("This false")
+		fmt.Println("False AND logic")
 	}
 }
 
@@ -20,9 +20,9 @@ func LogicOr() {
 
 	fmt.Println("##################### Logic OR #####################")
 	if a >= 1 || b <= 2 {
-		fmt.Println("Hello World")
+		fmt.Println("True OR logic")
 	} else {
-		fmt.Println("This false")
+		fmt.Println("False OR logic")
 	}
 }
 
@@ -32,8 +32,8 @@ func LogicNot() {
 
 	fmt.Println("##################### Logic NOT #####################")
 	if a != 2 || b != 3 {
-		fmt.Println("Hello World")
+		fmt.Println("True NOT logic")
 	} else {
-		fmt.Println("This false")
+		fmt.Println("False NOT logic")
 	}
 }

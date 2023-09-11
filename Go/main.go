@@ -1,7 +1,7 @@
 package main
 
-import "basicLoop/operator/operators"
+import "fmt"
 
 func main() {
-	operators.Assignment()
+	fmt.Println("Welcome to Go basic")
 }

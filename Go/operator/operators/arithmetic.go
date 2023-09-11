@@ -11,11 +11,11 @@ func NumberArithmetic() {
 	fmt.Println("Float Addition value is: ", x+y)
 	fmt.Println("Integer Subtraction value is: ", a-b)
 	fmt.Println("Float Subtraction value is: ", x-y)
-	fmt.Println("Integer Multiplication  value is: ", a*b)
-	fmt.Println("Float Multiplication  value is: ", x*y)
-	fmt.Println("Integer Division  value is: ", a/b)
-	fmt.Println("Float Division  value is: ", x/y)
-	fmt.Println("Integer Modulus  value is: ", a%b)
+	fmt.Println("Integer Multiplication value is: ", a*b)
+	fmt.Println("Float Multiplication value is: ", x*y)
+	fmt.Println("Integer Division value is: ", a/b)
+	fmt.Println("Float Division value is: ", x/y)
+	fmt.Println("Integer Modulus value is: ", a%b)
 
 }
 

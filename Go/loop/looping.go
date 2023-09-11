@@ -1,9 +1,9 @@
-package main
+package loop
 
 import "fmt"
 
 // This for loop
-func forLoop() {
+func ForLoop() {
 	for i := 1; i < 5; i++ {
 		fmt.Println("This For loop ", i)
 	}
@@ -11,7 +11,7 @@ func forLoop() {
 }
 
 // this while loop
-func whileLoop() {
+func WhileLoop() {
 	num := 1
 
 	for num < 5 {
@@ -22,7 +22,7 @@ func whileLoop() {
 
 }
 
-func breakAndCon() {
+func BreakAndContinue() {
 	//นับ 1 ถึง 10
 	fmt.Println("Count 1 to 10 !")
 
@@ -54,14 +54,14 @@ func breakAndCon() {
 }
 
 // shouldn't run, it infinity! อย่าหารัน เป็นตัวอย่างเฉยๆ
-func forEver() {
+func ForEverLoop() {
 	for {
 		fmt.Println("Hello World!")
 	}
 }
 
 // ใช้ range กับ for loop เพื่อเช็คสมาชิกทั้งหมดใน array และ map
-func rangeLoop() {
+func RangeLoop() {
 	fmt.Println("******** For range Array ********")
 	// สร้าง slice ของ string
 	strings := []string{"A", "B", "C", "D"}

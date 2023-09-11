@@ -7,12 +7,12 @@ func IntCompare() {
 	b := 2
 
 	fmt.Println("##################### Integer #####################")
-	fmt.Println("a == b is: ", (a == b))
-	fmt.Println("a != b is: ", (a != b))
-	fmt.Println("a > b is: ", (a > b))
-	fmt.Println("a < b is: ", (a < b))
-	fmt.Println("a >= b is: ", (a >= b))
-	fmt.Println("a <= b is: ", (a <= b))
+	fmt.Println("1 == 2 is: ", (a == b))
+	fmt.Println("1 != 2 is: ", (a != b))
+	fmt.Println("1 > 2 is: ", (a > b))
+	fmt.Println("1 < 2 is: ", (a < b))
+	fmt.Println("1 >= 2 is: ", (a >= b))
+	fmt.Println("1 <= 2 is: ", (a <= b))
 
 }
 
@@ -35,8 +35,8 @@ func StrCompare() {
 	b := "hello"
 
 	fmt.Println("#####################String#####################")
-	fmt.Printf("a == b is: %v\n", a == b)
-	fmt.Printf("a != b is: %v\n", a != b)
+	fmt.Printf("Hello == hello is: %v\n", a == b)
+	fmt.Printf("Hello != hello is: %v\n", a != b)
 
 }
 
@@ -45,7 +45,7 @@ func CharCompare() {
 	name2 := 'a'
 
 	fmt.Println("#####################Character#####################")
-	fmt.Printf("name1 == name2 is: %v\n", name1 == name2)
-	fmt.Printf("name1 != name2 is: %v\n", name1 != name2)
+	fmt.Printf("A == a is: %v\n", name1 == name2)
+	fmt.Printf("A != a is: %v\n", name1 != name2)
 
 }
