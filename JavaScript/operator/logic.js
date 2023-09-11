@@ -29,8 +29,8 @@ function NumberLogicNot() {
 }
 
 function StringLogicAnd() {
-  let user = "teera";
-  let password = "12345";
+  const user = "teera";
+  const password = "12345";
 
   if (user === "teera" && password === "12345") {
     return console.log("success");
@@ -40,10 +40,10 @@ function StringLogicAnd() {
 }
 
 function StringLogicOr() {
-  let user = "Teera";
-  let password = 12345;
+  const user = "Teera";
+  const password = 12345;
 
-  if (user === "teera" || password === "12345") {
+  if (user === "teera" || password == "12345") {
     return console.log("success");
   } else {
     return console.log("try again");
@@ -51,11 +51,11 @@ function StringLogicOr() {
 }
 
 function StringLogicNot() {
-  let user = "teera";
-  let password = "12345";
-  let gender = "M";
+  const user = "teera";
+  const password = "12345";
+  const gender = "M";
 
-  if (user !== "Teera" || password !== 12345 || gender !== "F") {
+  if (user !== "Teera" || password != 12345 || gender !== "F") {
     return console.log("success");
   } else {
     return console.log("try again");

@@ -1,74 +1,71 @@
 function NumberAssign() {
-  let x = 10;
   const y = 3;
+  let x = 10;
 
   console.log("Initial x =", x);
   console.log("Constant y =", y);
-
-  //This is all assign operator to variable
   console.log("******** Number Assignment ********");
 
-  //JavaScript Assignment Operators
-  x = 10;
+  // JavaScript Assignment Operators
   x += y;
   console.log("x += y, x =", x);
 
-  x = 10;
+  x = 10; // Reset x to its initial value
   x -= y;
   console.log("x -= y, x =", x);
 
-  x = 10;
+  x = 10; // Reset x to its initial value
   x *= y;
   console.log("x *= y, x =", x);
 
-  x = 10;
+  x = 10; // Reset x to its initial value
   x /= y;
   console.log("x /= y, x =", x);
 
-  x = 10;
+  x = 10; // Reset x to its initial value
   x %= y;
   console.log("x %= y, x =", x);
 
-  x = 10;
+  x = 10; // Reset x to its initial value
   x **= y;
   console.log("x **= y, x =", x);
 
-  //Shift Assignment Operators
-  x = 10;
+  // Shift Assignment Operators
+  x = 10; // Reset x to its initial value
   x <<= y;
   console.log("x <<= y, x =", x);
 
-  x = 10;
+  x = 10; // Reset x to its initial value
   x >>= y;
   console.log("x >>= y, x =", x);
 
-  x = 10;
+  x = 10; // Reset x to its initial value
   x >>>= y;
   console.log("x >>>= y, x =", x);
 
-  //Bitwise Assignment Operators
-  x = 10;
+  // Bitwise Assignment Operators
+  x = 10; // Reset x to its initial value
   x &= y;
   console.log("x &= y, x =", x);
 
-  x = 10;
+  x = 10; // Reset x to its initial value
   x ^= y;
   console.log("x ^= y, x =", x);
 
-  x = 10;
+  x = 10; // Reset x to its initial value
   x |= y;
   console.log("x |= y, x =", x);
 
-  //Logical Assignment Operators
-  x = 10;
+  // Logical Assignment Operators
+  x = 10; // Reset x to its initial value
   x &&= y;
   console.log("x &&= y, x =", x);
 
-  x = 10;
+  x = 10; // Reset x to its initial value
   x ||= y;
   console.log("x ||= y, x =", x);
 
-  x = 10;
+  x = 10; // Reset x to its initial value
   x ??= y;
   console.log("x ??= y, x =", x);
 
@@ -88,5 +85,6 @@ function OtherAssign() {
   console.log("\n");
 }
 
+//call function for run
 NumberAssign();
 OtherAssign();

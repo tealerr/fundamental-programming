@@ -23,3 +23,5 @@ fundamental-programming.iml
 go.work
 go.work.sum
 fundamental-programming.iml
+
+.lsp/
