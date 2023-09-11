@@ -2,7 +2,9 @@ package condition;
 
 public class Condition {
 
-  public static void main(String[] args) {}
+  public static void main(String[] args) {
+    System.out.println("This condition class");
+  }
 
   //ใช้ if else เพื่อคำนวณคะแนนออกมาเป็นเกรด เช่น A, B, F
   public static char gradeCal(int score) {
