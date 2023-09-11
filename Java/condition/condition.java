@@ -1,6 +1,6 @@
 package condition;
 
-public class condition {
+public class Condition {
 
   public static void main(String[] args) {}
 
@@ -18,7 +18,6 @@ public class condition {
     return grade;
   }
 
-  //variable = (condition) ? expressionTrue :  expressionFalse;
   // if ในรูปแบบ short statement
   public static void isStatus(int status) {
     String result = (status == 0)

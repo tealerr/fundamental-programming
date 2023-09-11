@@ -1,12 +1,9 @@
-public class looping {
+package loop;
+
+public class Looping {
 
   public static void main(String args[]) {
-    forLoop();
-    forEachLoop();
-    whileLoop();
-    doWhileLoop();
-    breakAndContinue();
-    forLength();
+    System.out.println("This loop class");
   }
 
   // ให้วน loop จนกว่าเงื่อนไขจะเป็นเท็จ

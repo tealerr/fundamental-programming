@@ -1,9 +1,9 @@
-public class logic {
+package operator;
+
+public class Logic {
 
   public static void main(String[] args) {
-    logicAnd();
-    logicOr();
-    logicNot();
+    System.out.println("This Logic operator class");
   }
 
   public static void logicAnd() {
@@ -12,9 +12,9 @@ public class logic {
     int b = 3;
 
     if (a >= 1 && b <= 2) {
-      System.out.println("Hello World");
+      System.out.println("Hello World!");
     } else {
-      System.out.println("This false");
+      System.out.println("This false!");
     }
   }
 

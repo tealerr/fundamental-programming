@@ -1,14 +1,12 @@
-public class assignment {
+package operator;
+
+public class Assignment {
 
   public static void main(String[] args) {
-    System.out.println("********  Assignment operators ********");
-    PrimaryAssign();
-
-    System.out.println("******** Other assignment operators ********");
-    OtherAssign();
+    System.out.println("This Assignment operator class");
   }
 
-  public static void PrimaryAssign() {
+  public static void primaryAssign() {
     int x;
 
     x = 10;
@@ -30,7 +28,7 @@ public class assignment {
     System.out.println("x /=3 is " + x);
   }
 
-  public static void OtherAssign() {
+  public static void otherAssign() {
     int x;
 
     x = 10;

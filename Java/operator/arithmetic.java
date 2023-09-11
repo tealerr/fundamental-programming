@@ -1,18 +1,19 @@
-public class arithmetic {
+package operator;
+
+public class Arithmetic {
 
   public static void main(String[] args) {
-    NumberArithmetic();
-    TextArithmetic();
+    System.out.println("This Arithmetic operator class");
   }
 
-  public static void NumberArithmetic() {
+  public static void numberArithmetic() {
     int sum = 5 + 3;
     double total = 10.5 + 2.5;
     System.out.println("sum value is: " + sum);
     System.out.println("total value is: " + total);
   }
 
-  public static void TextArithmetic() {
+  public static void textArithmetic() {
     char b = 'a' + 1;
 
     //String

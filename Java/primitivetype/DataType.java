@@ -1,4 +1,6 @@
-public class dataType {
+package primitivetype;
+
+public class DataType {
 
   public static void main(String[] args) {
     logicAnd();
@@ -12,9 +14,9 @@ public class dataType {
     int b = 3;
 
     if (a >= 1 && b <= 2) {
-      System.out.println("Hello World");
+      System.out.println("Hello World!");
     } else {
-      System.out.println("This false");
+      System.out.println("This false!");
     }
   }
 

@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Compare",
+      "request": "launch",
+      "mainClass": "operator.Compare",
+      "projectName": "fundamental-programming_51c450d5"
+    },
+    {
+      "type": "java",
       "name": "Launch Java Program",
       "request": "launch",
       "mainClass": ""

@@ -1,10 +1,11 @@
-public class compare {
+package operator;
+
+import java.util.Objects;
+
+public class Compare {
 
   public static void main(String[] args) {
-    decCompare();
-    intCompare();
-    strCompare();
-    charCompare();
+    System.out.println("This Compare operator class");
   }
 
   public static void intCompare() {
@@ -14,12 +15,12 @@ public class compare {
 
     // Output
     System.out.println("##################### Integer #####################");
-    System.out.println("a == b is: " + (a == b));
-    System.out.println("a != b is: " + (a != b));
-    System.out.println("a > b is: " + (a > b));
-    System.out.println("a < b is: " + (a < b));
-    System.out.println("a >= b is: " + (a >= b));
-    System.out.println("a <= b is: " + (a <= b));
+    System.out.println("1 == 2 is: " + (a == b));
+    System.out.println("1 != 2 is: " + (a != b));
+    System.out.println("1 > 2 is: " + (a > b));
+    System.out.println("1 < 2 is: " + (a < b));
+    System.out.println("1 >= 2 is: " + (a >= b));
+    System.out.println("1 <= 2 is: " + (a <= b));
   }
 
   public static void decCompare() {
@@ -29,12 +30,12 @@ public class compare {
 
     //Output
     System.out.println("##################### Decimal #####################");
-    System.out.println("a == b is: " + (a == b));
-    System.out.println("a != b is: " + (a != b));
-    System.out.println("a > b is: " + (a > b));
-    System.out.println("a < b is: " + (a < b));
-    System.out.println("a >= b is: " + (a >= b));
-    System.out.println("a <= b is: " + (a <= b));
+    System.out.println("10.2 == 22.25 is: " + (a == b));
+    System.out.println("10.2 != 22.25 is: " + (a != b));
+    System.out.println("10.2 > 22.25 is: " + (a > b));
+    System.out.println("10.2 < 22.25 is: " + (a < b));
+    System.out.println("10.2 >= 22.25 is: " + (a >= b));
+    System.out.println("10.2 <= 22.25 is: " + (a <= b));
   }
 
   public static void strCompare() {
@@ -44,8 +45,8 @@ public class compare {
 
     //Output
     System.out.println("##################### String #####################");
-    System.out.println("a == b is: " + (a == b));
-    System.out.println("a != b is: " + (a != b));
+    System.out.println("a == b is: " + (Objects.equals(a, b))); //change == to use (Objects.equals)
+    System.out.println("a != b is: " + (!Objects.equals(a, b))); //change != to use !(Objects.equals), it's mean not equals
   }
 
   public static void charCompare() {
@@ -55,7 +56,7 @@ public class compare {
 
     //Output
     System.out.println("##################### Character #####################");
-    System.out.println("name1 == name2 is: " + (name1 == name2));
-    System.out.println("name1 != name2 is: " + (name1 != name2));
+    System.out.println("'A' == 'a' is: " + (name1 == name2));
+    System.out.println("'A' != 'a' is: " + (name1 != name2));
   }
 }
