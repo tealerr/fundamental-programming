@@ -60,7 +60,7 @@ function doWhileLoop() {
   console.log("\n");
 }
 
-function breakAndCon() {
+function breakAndContinue() {
   console.log("\n");
   console.log("Let's say hello 5 times\n");
   console.log("***** Use break *****");
@@ -89,4 +89,4 @@ forInLoop();
 forOfLoop();
 whileLoop();
 doWhileLoop();
-breakAndCon();
+breakAndContinue();

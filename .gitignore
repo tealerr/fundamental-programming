@@ -17,7 +17,7 @@ Java/operator/*.class
 
 
 .vscode/settings.json
-out/production/fundamental-programming
+out/
 fundamental-programming.iml
 .clj-kondo/.cache/v1/
 
