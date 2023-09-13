@@ -17,14 +17,14 @@ Java/*.class
 Java/condition/*.class
 Java/operator/*.class
 
-
-.vscode/settings.json
 out/
 fundamental-programming.iml
-.clj-kondo/.cache/v1/
-
+.clj-kondo/
+.vscode/
 go.work
 go.work.sum
 fundamental-programming.iml
 
 .lsp/
+
+sonar-project.properties
