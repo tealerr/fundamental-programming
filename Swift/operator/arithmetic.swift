@@ -43,9 +43,3 @@ myStr1 = "Hello"
 myStr2 = "World!"
 print("Greeting: ", myStr1+" "+myStr2)
 print("\n")
-
-
-
-
-
-

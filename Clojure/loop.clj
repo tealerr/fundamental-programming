@@ -8,7 +8,7 @@
 ; while loop คล้ายกับภาษาอื่น จะทำงานในขณะที่เงื่อนไขเป็นจริง
 (let [x (atom 3)] ; กำหนดให้ค่าเริ่มต้นของ x = 3
   (while (<= @x 9) ; กำหนดเงื่อนไข
-    (println "while count is" @x) ; แสดงผล x 
+    (println "while count is" @x) ; แสดงผล x
     (swap! x + 2))) ; เพิ่มค่า x ทีละ 2
 (println "")
 

@@ -8,6 +8,8 @@
 /dataSources.local.xml
 
 go.work
+.idea/*.xml
+
 .idea/
 
 # Ignore Java class file

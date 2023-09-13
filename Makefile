@@ -1,14 +1,17 @@
 go-run:
 	@cd Go && go run main.go
 
-java-run: 
+java-run:
 	@cd Java && javac Main.java && java Main
 
-js-run: 
+js-run:
 	@cd JavaScript && node main.js
-s
-cpp-run: 
+
+cpp-run:
 	@cd C++ && g++ loop.cpp -o loop && ./loop
 
-swift-run: 
+swift-run:
 	@cd Swift && swift loop.swift
+
+pre-commit:
+	@pre-commit run --all-file

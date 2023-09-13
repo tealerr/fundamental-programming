@@ -21,11 +21,11 @@
 
 (println "####### Vector compare")
 (println "[1 2 3] = [1 2 3] is "(= lst1 lst2))
-(println "list1 and lis2 is identical objects? "(identical? lst1 lst2)) 
+(println "list1 and lis2 is identical objects? "(identical? lst1 lst2))
 (println "\n")
 
 (println "Instance compare")
 (println "Hello is string instance? "(instance? String str1))
-(println "10 is number instance?"(instance? Number num1)) 
-(println "10 is string instance?"(instance? String num1)) 
+(println "10 is number instance?"(instance? Number num1))
+(println "10 is string instance?"(instance? String num1))
 (println "\n")
