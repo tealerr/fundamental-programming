@@ -35,7 +35,7 @@ void GradeCalWithElseIf(int score) {
 // เขียนในรูปแบบ short statement ในกรณีที่เงื่อนไขไม่ซับซ้อน basic
 void ShortHandIf(int status) {
   enum Status { TURN_ON = 1, TURN_OFF = 0 };
-  string result = (status == 0) ? "device turn off!!\n" : "device turn on!!\n";
+        string result = (status == 0) ? "device turn off!!\n" : "device turn on!!\n";
   cout << result;
 }
 
