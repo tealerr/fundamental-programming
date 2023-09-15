@@ -14,7 +14,7 @@
 
 ;doseq loop ใช้เพื่อทำงานกับสมาชิกในลิสต์หรือคอลเล็คชันต่าง ๆ
 (doseq [n [0 1 2 "A" "T"]] ; n เก็บค่าที่ออกมาจาก array
-  (println "deseq output is "n)) ; d
+  (println "deseq output is "n)) ;
 (println "")
 
 ;Dotimes ใช้เพื่อทำงานซ้ำตามจำนวนรอบที่กำหนดไว้
