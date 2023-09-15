@@ -1,5 +1,5 @@
 // Integer arithmetic
-var myInt1,myInt2: Int
+var myInt1, myInt2: Int
 myInt1 = 10
 myInt2 = 5
 
@@ -12,7 +12,7 @@ print("10 % 5 = ", myInt1%myInt2)
 print("\n")
 
 // Floating-point arithmetic
-var myFloat1,myFloat2: Float
+var myFloat1, myFloat2: Float
 
 myFloat1 = 5.25
 myFloat2 = 3.12

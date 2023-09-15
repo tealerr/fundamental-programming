@@ -3,10 +3,10 @@ func gradeCal(score: Int) -> Character {
     var grade: Character
 
     if score >= 80 {
-        grade = "A" //if true, grade =80, false ไปเงื่อนไขต่อไป
+        grade = "A" // if true, grade =80, false ไปเงื่อนไขต่อไป
     } else if score >= 70 && score < 80 {
         grade = "B"
-    } else { //เงื่อนไขสุดท้าย
+    } else { // เงื่อนไขสุดท้าย
         grade = "F"
     }
 

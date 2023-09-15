@@ -36,7 +36,6 @@ print("\(floatA) >= \(floatB) =", floatA >= floatB)
 print("\(floatA) <= \(floatB) =", floatA <= floatB)
 print("\n")
 
-
 // Comparison operators with doubles
 print("######## Double Compare")
 print("\(doubleA) == \(doubleB) =", doubleA == doubleB)
@@ -58,7 +57,6 @@ print("######## Characters Compare")
 print("\(charA) == \(charB) =", charA == charB)
 print("\(charA) != \(charB) =", charA != charB)
 print("\n")
-
 
 // Comparison operators with booleans
 print("######## Booleans Compare")

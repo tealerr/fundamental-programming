@@ -36,7 +36,6 @@ print("\(myInt1) > 0 && \(myInt2) < 20 =", myInt1 > 0 && myInt2 < 20)
 print("\(myInt1) > 0 || \(myInt2) < 20 =", myInt1 > 0 || myInt2 < 20)
 print("\n")
 
-
 // Logical operators with floats
 print("Float Logic")
 print("\(myFloat1) > 0.0 && \(myFloat2) < 15.0 =", myFloat1 > 0.0 && myFloat2 < 15.0)

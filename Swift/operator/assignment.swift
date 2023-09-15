@@ -5,7 +5,6 @@ var myBool: Bool
 var myStr: String
 var myChar: Character
 
-
 // Integer assignment
 print("####### Integer assignment #######")
 myInt = 10
@@ -32,8 +31,7 @@ myInt %= 3
 print("10 %= 3 =", myInt)
 print("\n")
 
-
-//Floating-point assignment
+// Floating-point assignment
 print("####### Floating-point assignment #######")
 myFloat = 3.14
 print("float =", myFloat)
@@ -77,13 +75,12 @@ myDouble /= 1.5
 print("5.25 /= 1.5 =", myDouble)
 print("\n")
 
-
 // // String assignment
 print("####### String assignment #######")
 myStr = "Hello, "
 myStr += "world!"
 print("my string is ")
-print("string1 + string2 is ",myStr)
+print("string1 + string2 is ", myStr)
 print("\n")
 
 print("####### Character assignment #######")
