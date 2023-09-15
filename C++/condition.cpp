@@ -33,7 +33,7 @@ void GradeCalWithElseIf(int score)
     else if (score >= 60 && score < 70)
     {
         grade = 'C';
-        std::cout << grade << std::endl;
+                std::cout << grade << std::endl;
     }
     else
     { // ถ้าเป็นเงื่อนไขสุดท้าย ใช้ else
