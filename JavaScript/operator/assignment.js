@@ -73,7 +73,7 @@ function NumberAssign() {
 }
 
 function OtherAssign() {
-  //This is normal assign value to variable by use "="
+  // This is normal assign value to variable by use "="
   let myName = "Teeramate";
   let myChar = "T";
   let myBool = true;
@@ -85,6 +85,6 @@ function OtherAssign() {
   console.log("\n");
 }
 
-//call function for run
+// call function for run
 NumberAssign();
 OtherAssign();

@@ -1,4 +1,4 @@
-//for loop
+// for loop
 function forLoop() {
   for (let i = 0; i < 5; i++) {
     console.log(i);
@@ -11,22 +11,24 @@ function forLoop() {
 // โดยทั่วไป for...in ใช้กับอ็อบเจกต์เท่านั้น (object)
 function forInLoop() {
   let myCar = {
-    brand: "BMW",
-    models: "i8",
-    color: "black",
+    brand : "BMW",
+    models : "i8",
+    color : "black",
   };
   for (const key in myCar) {
     //สร้างตัวแปร key เพื่อเก็บชื่อของคุณสมบัติ (property name)
-    console.log(key + ":" + myCar[key]); // เข้าถึงค่าของข้อมูล โดยใช้ key และ print ออกมา
+    console.log(key + ":" +
+                myCar[key]); // เข้าถึงค่าของข้อมูล โดยใช้ key และ print ออกมา
   }
   console.log("\n");
 }
 
 // The For Of Loop
-// for...of เป็นลูปที่ใช้ในการวนลูปผ่านค่าข้อมูล (values) ของอ็อบเจกต์ที่เป็น Iterable (ตัวอย่างเช่น อาร์เรย์, สตริง, แม็พ, Set)
-// for...of ใช้กับ Iterable objects เท่านั้น (ตัวอย่างเช่น อาร์เรย์, สตริง, แม็พ, Set)
+// for...of เป็นลูปที่ใช้ในการวนลูปผ่านค่าข้อมูล (values) ของอ็อบเจกต์ที่เป็น Iterable
+// (ตัวอย่างเช่น อาร์เรย์, สตริง, แม็พ, Set) for...of ใช้กับ Iterable objects เท่านั้น
+// (ตัวอย่างเช่น อาร์เรย์, สตริง, แม็พ, Set)
 function forOfLoop() {
-  let myColor = ["red", "green", "blue"];
+  let myColor = [ "red", "green", "blue" ];
 
   for (const color of myColor) {
     // สร้างตัวแปร color เพื่อเก็บค่าของสมาชิกแต่ละตัวใน array
@@ -35,7 +37,7 @@ function forOfLoop() {
   console.log("\n");
 }
 
-//The While Loop
+// The While Loop
 function whileLoop() {
   console.log("while loop");
 
@@ -47,7 +49,7 @@ function whileLoop() {
   console.log("\n");
 }
 
-//The Do While Loop
+// The Do While Loop
 function doWhileLoop() {
   console.log("do-while loop");
 

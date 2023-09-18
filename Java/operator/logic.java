@@ -7,7 +7,7 @@ public class Logic {
   }
 
   public static void logicAnd() {
-    //Logic AND
+    // Logic AND
     int a = 2;
     int b = 3;
 
@@ -19,7 +19,7 @@ public class Logic {
   }
 
   public static void logicOr() {
-    //Logic AND
+    // Logic AND
     int a = 2;
     int b = 3;
 
@@ -31,7 +31,7 @@ public class Logic {
   }
 
   public static void logicNot() {
-    //Logic AND
+    // Logic AND
     int a = 2;
     int b = 3;
 

@@ -56,7 +56,7 @@ void numberAssign() {
   {
     x = 10;
     y = 5;
-    x <<= 2; // Shift x left by 2 positions
+    x <<= 2;  // Shift x left by 2 positions
     std::cout << "x after left shift: " << x << std::endl;
   }
 
@@ -64,7 +64,7 @@ void numberAssign() {
     x = 10;
     y = 5;
     // Right shift assignment (x >>= y is equivalent to x = x >> y)
-    x >>= 1; // Shift x right by 1 position
+    x >>= 1;  // Shift x right by 1 position
     std::cout << "x after right shift: " << x << std::endl;
   }
 
@@ -73,21 +73,21 @@ void numberAssign() {
   {
     x = 10;
     y = 5;
-    x &= y; // Perform bitwise AND and assign the result to x
+    x &= y;  // Perform bitwise AND and assign the result to x
     std::cout << "x after bitwise AND: " << x << std::endl;
   }
 
   {
     x = 10;
     y = 5;
-    x |= y; // Perform bitwise OR and assign the result to x
+    x |= y;  // Perform bitwise OR and assign the result to x
     std::cout << "x after bitwise OR: " << x << std::endl;
   }
 
   {
     x = 10;
     y = 5;
-    x ^= y; // Perform bitwise XOR and assign the result to x
+    x ^= y;  // Perform bitwise XOR and assign the result to x
     std::cout << "x after bitwise XOR: " << x << std::endl;
   }
 

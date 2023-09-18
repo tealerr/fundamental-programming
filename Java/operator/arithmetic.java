@@ -16,12 +16,12 @@ public class Arithmetic {
   public static void textArithmetic() {
     char b = 'a' + 1;
 
-    //String
+    // String
     String firstName = "John";
     String lastName = "Doe";
     String fullName = firstName + " " + lastName;
 
-    //Output
+    // Output
     System.out.println("b value is: " + b);
     System.out.println("fullName is: " + fullName);
   }

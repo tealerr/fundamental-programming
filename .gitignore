@@ -16,6 +16,7 @@ go.work
 Java/*.class
 Java/condition/*.class
 Java/operator/*.class
+Java/primitivetype/*.class
 
 out/
 fundamental-programming.iml

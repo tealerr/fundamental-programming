@@ -22,27 +22,26 @@ public class Condition {
 
   // if ในรูปแบบ short statement
   public static void isStatus(int status) {
-    String result = (status == 0)
-      ? "device turn off!!\n"
-      : "device turn on!!\n";
+    String result =
+        (status == 0) ? "device turn off!!\n" : "device turn on!!\n";
     System.out.println(result);
   }
 
   //ใช้ switch case เพื่อหาเกรดที่ตรงตามเคส และแสดงผลออกมา
   public static void showGrade(char grade) {
     switch (grade) {
-      case 'A':
-        System.out.println("Your grade is A\n");
-        break;
-      case 'B':
-        System.out.println("Your grade is B\n");
-        break;
-      case 'F':
-        System.out.println("Your grade is F\n");
-        break;
-      default:
-        System.out.println("Invalid grade\n");
-        break;
+    case 'A':
+      System.out.println("Your grade is A\n");
+      break;
+    case 'B':
+      System.out.println("Your grade is B\n");
+      break;
+    case 'F':
+      System.out.println("Your grade is F\n");
+      break;
+    default:
+      System.out.println("Invalid grade\n");
+      break;
     }
   }
 }
