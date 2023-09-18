@@ -1,4 +1,4 @@
-name: Lint
+name: JS-lint
 
 on:
   push:
