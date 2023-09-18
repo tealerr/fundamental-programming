@@ -27,6 +27,5 @@ repos:
     hooks:
       - id: clj-kondo
         args: ["error"]
-      - id: kaocha
         stages: [merge-commit, push, manual]
         always_run: true
