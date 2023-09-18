@@ -33,7 +33,7 @@ func ShowGrade(grade rune) string {
 // เป็น function ที่ใช้เพื่อเปิดปิดอุปกรณ์
 func IsActive(num int) string {
 	if num == 1 { // 1 แทนการเปิดเครื่อง
-		return "Device is On" //ถ้าเงื่อนไขเป็จริง จะเข้าการทำงานใน block นี้
+		return "Device is On" // ถ้าเงื่อนไขเป็จริง จะเข้าการทำงานใน block นี้
 	}
 	return "Device is Off" // ถ้าเป็น false จะทำงานตรงนี้
 }

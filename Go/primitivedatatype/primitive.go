@@ -3,14 +3,14 @@ package primitivedatatype
 import "fmt"
 
 func ImplicitDeclare() {
-	//Implicit declare
+	// Implicit declare
 	myNum := 112
 	myFloat := 1.12
 	myChar := 'T'
 	myName := "Teeramate"
 	myStatus := true
 
-	//Output
+	// Output
 	fmt.Println("##################### Implicit declare #####################")
 	fmt.Printf("myNum's type is %T and its value is %v\n", myNum, myNum)
 	fmt.Printf("myFloat's type is %T and its value is %v\n", myFloat, myFloat)
@@ -21,7 +21,7 @@ func ImplicitDeclare() {
 }
 
 func ExplicitDeclare() {
-	//Explicit declare
+	// Explicit declare
 
 	var a uint = 500
 	var b float32 = 1.12
@@ -29,7 +29,7 @@ func ExplicitDeclare() {
 	var myName byte = 'T'
 	var Name string = "Teeramate"
 
-	//Output
+	// Output
 	fmt.Println("##################### Explicit declare #####################")
 	fmt.Printf("a's type is %T and its value is %v\n", a, a)
 	fmt.Printf("b's type is %T and its value is %v\n", b, b)
