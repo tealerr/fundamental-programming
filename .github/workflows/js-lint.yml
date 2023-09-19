@@ -26,10 +26,7 @@ jobs:
         run: |
           cd JavaScript
           npm ci
-        working-directory: ${{ github.workspace }}/JavaScript
+        working-directory: JavaScript/
 
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
-          prettier: true
+      - name: Run ESLint
+        uses: stefanoeb/eslint-action@1.0.2
