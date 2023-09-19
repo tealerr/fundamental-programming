@@ -81,7 +81,7 @@ void numberAssign() {
     x = 10;
     y = 5;
     x |= y;  // Perform bitwise OR and assign the result to x
-    std::cout << "x after bitwise OR: " << x << std::endl;
+    std::cout << "x after b itwise OR: " << x << std::endl;
   }
 
   {
