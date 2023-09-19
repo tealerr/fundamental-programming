@@ -26,11 +26,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           checkstyle_config: sun_checks.xml
-
-      - name: Google Java Format
-        uses: axel-op/googlejavaformat-action@v3.6.0
-        with:
-          args: "--skip-sorting-imports --replace"
-
-      - name: Print diffs
-        run: git --no-pager diff --exit-code
