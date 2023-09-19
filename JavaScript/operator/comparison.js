@@ -15,7 +15,7 @@ function NumberCompare() {
 }
 
 function StringCompare() {
-  console.log("********String Compare ********");
+  console.log("******** String Compare ********");
 
   let text1 = "Hello";
   let text2 = "hello";
