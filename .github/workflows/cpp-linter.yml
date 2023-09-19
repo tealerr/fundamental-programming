@@ -1,8 +1,6 @@
 name: cpp-linter
 
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
   push:
     branches:
       - main
@@ -19,8 +17,20 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v3
 
-      - name: Install ClangFormat
-        run: sudo apt-get install -y clang-format
+      - name: Change working directory to /C++
+        run: cd C++
+
+      - name: Install C++ (g++) and clang-format
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y g++-11 clang-format
+        shell: bash
+
+      - name: clang-format lint
+        uses: DoozyX/clang-format-lint-action@v0.16.2
+
+      # - name: Install ClangFormat
+      #   run: sudo apt-get install -y clang-format
 
       - name: Run linters
         uses: wearerequired/lint-action@v2
