@@ -1,44 +1,29 @@
-name: Swift-lint
+name: SwiftLint
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    paths:
+      - "Swift/*.swift"
+      - ".github/workflows/swiftlint.yml"
+      - ".swiftlint.yml"
+      - "**/*.swift"
 
 jobs:
-  swift-format-lint:
+  SwiftLint:
     runs-on: ubuntu-latest
-    name: Swift-Format
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Change working directory to /Swift
-        run: cd Swift
-
-      - name: Restore swift build cache
-        uses: actions/cache@v1
+      - uses: actions/checkout@v1
+      - name: GitHub Action for SwiftLint
+        uses: norio-nomura/action-swiftlint@3.2.1
+      - name: GitHub Action for SwiftLint with --strict
+        uses: norio-nomura/action-swiftlint@3.2.1
         with:
-          path: .build
-          key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
-          restore-keys: |
-            ${{ runner.os }}-spm-
-
-      - name: swift build
-        run: |
-          if [ -d ".build" ]; then
-            if ! [ -x "$(command -v swift-format)" ]; then
-              sudo cp -f .build/release/swift-format /usr/local/bin/swift-format
-            fi
-          else
-            git clone -b swift-5.2-branch https://github.com/apple/swift-format.git
-            cd swift-format
-            swift build --disable-sandbox -c release
-            mv .build .. && cd ..
-            sudo cp -f .build/release/swift-format /usr/local/bin/swift-format
-          fi
-
-      - name: Lint
-        uses: Iron-Ham/swift-format-linter-action@v5
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          args: --strict
+      - name: GitHub Action for SwiftLint (Only files changed in the PR)
+        uses: norio-nomura/action-swiftlint@3.2.1
+        env:
+          DIFF_BASE: ${{ github.base_ref }}
+      - name: GitHub Action for SwiftLint (Different working directory)
+        uses: norio-nomura/action-swiftlint@3.2.1
+        env:
+          WORKING_DIRECTORY: Source
