@@ -1,12 +1,12 @@
-name: SwiftLint
+name: swift-linter
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
-    paths:
-      - "Swift/*.swift"
-      - ".github/workflows/swiftlint.yml"
-      - ".swiftlint.yml"
-      - "**/*.swift"
+    branches:
+      - main
 
 jobs:
   SwiftLint:
