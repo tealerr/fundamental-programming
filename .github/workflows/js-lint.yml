@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  run-linters:
+  prettier:
     name: Run linters
     runs-on: ubuntu-latest
 
@@ -17,16 +17,13 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Change working directory to /JavaScript/
+        run: cd JavaScript
+
+      - name: Prettify code
+        uses: creyD/prettier_action@v4.3
         with:
-          node-version: 12
+          prettier_options: --write **/*.{js,md}
 
-      - name: Install Node.js dependencies
-        run: |
-          cd JavaScript
-          npm ci
-        working-directory: JavaScript/
-
-      - name: Run ESLint
-        uses: stefanoeb/eslint-action@1.0.2
+      - name: Prettier Action
+        uses: creyD/prettier_action@v4.3
