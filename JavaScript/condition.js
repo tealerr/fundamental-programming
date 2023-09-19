@@ -19,18 +19,18 @@ function gradeCalculate(score) {
 function showGrade(grade) {
   let message;
   switch (grade) {
-  case "A":
-    message = "Your grade is A";
-    break;
-  case "B":
-    message = "Your grade is B";
-    break;
-  case "F":
-    message = "Your grade is F";
-    break;
-  default:
-    message = "Invalid grade";
-    break;
+    case "A":
+      message = "Your grade is A";
+      break;
+    case "B":
+      message = "Your grade is B";
+      break;
+    case "F":
+      message = "Your grade is F";
+      break;
+    default:
+      message = "Invalid grade";
+      break;
   }
 
   console.log(message);

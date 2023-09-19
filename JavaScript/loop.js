@@ -11,14 +11,13 @@ function forLoop() {
 // โดยทั่วไป for...in ใช้กับอ็อบเจกต์เท่านั้น (object)
 function forInLoop() {
   let myCar = {
-    brand : "BMW",
-    models : "i8",
-    color : "black",
+    brand: "BMW",
+    models: "i8",
+    color: "black",
   };
   for (const key in myCar) {
     //สร้างตัวแปร key เพื่อเก็บชื่อของคุณสมบัติ (property name)
-    console.log(key + ":" +
-                myCar[key]); // เข้าถึงค่าของข้อมูล โดยใช้ key และ print ออกมา
+    console.log(key + ":" + myCar[key]); // เข้าถึงค่าของข้อมูล โดยใช้ key และ print ออกมา
   }
   console.log("\n");
 }
@@ -28,7 +27,7 @@ function forInLoop() {
 // (ตัวอย่างเช่น อาร์เรย์, สตริง, แม็พ, Set) for...of ใช้กับ Iterable objects เท่านั้น
 // (ตัวอย่างเช่น อาร์เรย์, สตริง, แม็พ, Set)
 function forOfLoop() {
-  let myColor = [ "red", "green", "blue" ];
+  let myColor = ["red", "green", "blue"];
 
   for (const color of myColor) {
     // สร้างตัวแปร color เพื่อเก็บค่าของสมาชิกแต่ละตัวใน array

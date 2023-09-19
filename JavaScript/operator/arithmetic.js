@@ -47,8 +47,7 @@ function MixArithmetic() {
   console.log("******** Mix data type ********");
   console.log("10 + '5' is ", number + numStr); // type is String
   console.log("10 - 'hello' is ", number - str);
-  console.log("10 * '5' is ",
-              number * numStr); // when use -, *, /, %, ** type is Number
+  console.log("10 * '5' is ", number * numStr); // when use -, *, /, %, ** type is Number
   console.log("10 / '5' is ", number / numStr);
   console.log("10 % '5' is ", number % numStr);
   console.log("10 ** '5' is ", number ** numStr);
