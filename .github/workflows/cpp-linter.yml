@@ -28,8 +28,6 @@ jobs:
 
       - name: clang-format lint
         uses: DoozyX/clang-format-lint-action@v0.16.2
-        with:
-          style: Google
 
       # - name: Install ClangFormat
       #   run: sudo apt-get install -y clang-format
