@@ -27,7 +27,5 @@ jobs:
           reporter: github-pr-review
           checkstyle_config: sun_checks.xml
 
-      - name: Run Google Java Format
-        uses: axel-op/googlejavaformat-action@v3
-        with:
-          args: "--set-exit-if-changed"
+      - name: Google Java Format
+        uses: axel-op/googlejavaformat-action@v3.6.0
