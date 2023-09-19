@@ -1,0 +1,26 @@
+name: clojure-linter
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Change working directory to /Clojure
+        run: cd Clojure
+
+      - uses: DeLaGuardo/clojure-lint-action@master
+        with:
+          clj-kondo-args: --lint src
+          github_token: ${{ secrets.GITHUB_TOKEN }}
