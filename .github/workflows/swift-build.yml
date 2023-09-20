@@ -13,8 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Change working directory to Java
-        run: cd Java
+      - name: Change working directory to Swift
+        run: cd Swift
 
       - name: Build
         run: swift build
