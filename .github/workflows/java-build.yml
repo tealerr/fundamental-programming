@@ -1,13 +1,14 @@
-# The name of the workflow. GitHub displays the names of your workflows under your repository's "Actions" tab. If you omit `name`, GitHub displays the workflow file path relative to the root of the repository.
 name: Java CI
 
-#
-on: [push]
-#
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    #
+
     steps:
       - uses: actions/checkout@v4
 
@@ -19,6 +20,6 @@ jobs:
         with:
           java-version: "17"
           distribution: "temurin"
-      # This step runs the default target in your `build.xml` file in non-interactive mode.
-      - name: Build with Ant
-        run: ant -noinput -buildfile build.xml
+
+      - name: Build with Maven
+        run: mvn --batch-mode --update-snapshots package
