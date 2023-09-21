@@ -14,6 +14,9 @@ jobs:
       - name: Change working directory to Go
         run: cd Go
 
+      - name: Print current working directory
+        run: pwd
+
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
