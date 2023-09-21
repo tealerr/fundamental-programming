@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "format": "prettier --write 'JavaScript/**/*.js'"
+    "format": "prettier --write 'JavaScript/**/*.js'",
+    "test": "jest"
   },
   "name": "javascript",
   "version": "1.0.0",
