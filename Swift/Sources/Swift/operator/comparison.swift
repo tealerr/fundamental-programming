@@ -35,6 +35,7 @@ print("\(floatA) < \(floatB) =", floatA < floatB)
 print("\(floatA) >= \(floatB) =", floatA >= floatB)
 print("\(floatA) <= \(floatB) =", floatA <= floatB)
 print("\n")
+print("he;llo world")
 
 // Comparison operators with doubles
 print("######## Double Compare")

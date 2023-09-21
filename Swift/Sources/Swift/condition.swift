@@ -36,5 +36,3 @@ func main() {
     let message = showGrade(grade: score)
     print(message)
 }
-
-main()
