@@ -16,8 +16,11 @@ jobs:
       - name: Change working directory to C++
         run: cd C++
 
+      - name: Make configure script executable
+        run: chmod +x configure
+
       - name: configure
-        run: ./C++/configure
+        run: ./configure
 
       - name: make
         run: make
