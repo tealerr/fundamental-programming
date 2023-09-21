@@ -11,12 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Change working directory to Go
-        run: cd /home/runner/work/fundamental-programming/fundamental-programming/Go/
-
-      - name: Print current working directory
-        run: pwd
-
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
