@@ -16,6 +16,9 @@ jobs:
       - name: Change working directory to C++
         run: cd C++
 
+      - name: Print current working directory
+        run: pwd
+
       - name: Build project
         uses: nicledomaS/cmake_build_action@v1.4
         with:
