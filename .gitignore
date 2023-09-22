@@ -11,6 +11,7 @@ go.work
 .idea/*.xml
 
 .idea/
+.vscode/
 
 # Ignore Java class file
 Java/*.class
@@ -28,3 +29,9 @@ fundamental-programming.iml
 
 .lsp/
 JavaScript/node_modules
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build

@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Assignment",
+      "request": "launch",
+      "mainClass": "src.main.java.mbt.operator.Assignment",
+      "projectName": "fundamental-programming_74f7cfb0"
+    },
+    {
+      "type": "java",
+      "name": "Compare",
+      "request": "launch",
+      "mainClass": "src.main.java.mbt.operator.Compare",
+      "projectName": "fundamental-programming_74f7cfb0"
+    },
+    {
+      "type": "java",
       "name": "Compare",
       "request": "launch",
       "mainClass": "operator.Compare",
