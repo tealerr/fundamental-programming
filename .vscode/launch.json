@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Condition",
+      "request": "launch",
+      "mainClass": "demogradle.condition.Condition",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "Logic",
+      "request": "launch",
+      "mainClass": "demogradle.operator.Logic",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "Assignment",
       "request": "launch",
       "mainClass": "src.main.java.mbt.operator.Assignment",
