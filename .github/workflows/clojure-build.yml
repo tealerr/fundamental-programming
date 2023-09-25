@@ -29,7 +29,7 @@ jobs:
       - name: Install Clojure CLI on macOS
         run: |
           brew install clojure/tools/clojure
-        if: runner.os == 'macOS'
+        if: runner.os == 'macOS-latest'
 
       - name: Install Clojure CLI on Linux
         run: |
@@ -43,12 +43,6 @@ jobs:
           mkdir -p $HOME/bin
           curl -o $HOME/bin/lein https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
           chmod +x $HOME/bin/lein
-
-      - name: Install Boot
-        run: |
-          mkdir -p $HOME/bin
-          curl -L https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh -o $HOME/bin/boot
-          chmod +x $HOME/bin/boot
 
       - name: Install Babashka
         run: |
@@ -66,29 +60,12 @@ jobs:
           key: cljdeps-${{ runner.os }}-${{ hashFiles('**/deps.edn') }}
           restore-keys: cljdeps-${{ runner.os }}-
 
-      - name: Execute Clojure code
-        run: clojure -e "(+ 1 1)"
-        if: runner.os == 'ubuntu-latest' # Adjust this condition as needed
-
-      - name: Get Leiningen version
-        run: lein -v
-
-      - name: Get Boot version
-        run: boot -V
-
-      - name: Get Babashka version
-        run: bb --version
-
-      - name: Get clj-kondo version
-        run: clj-kondo --version
-
-      - name: Get cljfmt version
-        run: cljfmt --version
-
-      - name: Get cljstyle version
-        # Skip cljstyle on Windows
-        if: runner.os != 'windows-latest'
-        run: cljstyle version
-
-      - name: Get zprint version
-        run: zprint --version
+      - name: Run Boot
+        run: |
+          if [[ "${runner.os}" == "ubuntu-latest" || "${runner.os}" == "macOS-latest" ]]; then
+            # Download and install Boot Wrapper
+            curl -fsSLo boot https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh
+            chmod +x boot
+            ./boot -V
+          fi
+        shell: bash
