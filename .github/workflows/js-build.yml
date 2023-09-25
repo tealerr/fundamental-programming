@@ -44,7 +44,7 @@ jobs:
         working-directory: JavaScript/
 
       - name: Use specific npm version
-        run: npm install -g npm@9.5.1
+        run: npm install -g npm@7.24.0
         working-directory: JavaScript/
 
       - name: Build (if present)
