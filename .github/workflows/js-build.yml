@@ -33,12 +33,18 @@ jobs:
           rm package-lock.json
         working-directory: JavaScript/
 
+      - name: Remove fsevents from package.json
+        run: |
+          npm uninstall fsevents
+          npm prune
+        working-directory: JavaScript/
+
       - name: Generate package-lock.json
         run: npm install
         working-directory: JavaScript/
 
       - name: Use specific npm version
-        run: npm install -g npm@7.24.0
+        run: npm install -g npm@9.5.1
         working-directory: JavaScript/
 
       - name: Build (if present)
