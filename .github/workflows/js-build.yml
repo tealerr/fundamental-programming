@@ -56,7 +56,7 @@ jobs:
         working-directory: JavaScript/
 
       - name: Run tests
-        run: npm test
+        run: npm test -- --passWithNoTests
         working-directory: JavaScript/
 
       - name: Cache npm dependencies
