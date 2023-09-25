@@ -39,6 +39,10 @@ jobs:
           npm prune
         working-directory: JavaScript/
 
+      - name: Set npm log level to verbose
+        run: npm config set loglevel verbose
+        working-directory: JavaScript/
+
       - name: Generate package-lock.json
         run: npm install
         working-directory: JavaScript/
