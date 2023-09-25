@@ -25,9 +25,14 @@ jobs:
       - name: Install clojure tools
         uses: DeLaGuardo/setup-clojure@12.1
         with:
-          cli: "1.10.1.693 2.9.1 2.8.3 0.7.8 2022.05.31 0.10.2 0.15.0 latest 1.2.3"
-          # Specify the versions of various Clojure tools as a single space-separated string
-          # "latest" is used for cmd-exe-workaround on Windows
+          cli: 1.10.1.693 # Clojure CLI based on tools.deps
+          lein: 2.9.1 # Leiningen
+          boot: 2.8.3 # Boot.clj
+          bb: 0.7.8 # Babashka
+          clj-kondo: 2022.05.31 # Clj-kondo
+          cljfmt: 0.10.2 # cljfmt
+          cljstyle: 0.15.0 # cljstyle
+          zprint: 1.2.3 # zprint
 
       # Optional step:
       - name: Cache clojure dependencies
