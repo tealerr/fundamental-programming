@@ -35,9 +35,11 @@ jobs:
       - name: Install Swift (macOS)
         if: matrix.os == 'macos-latest'
         run: |
-          xcode-select --install
-          wget https://swift.org/builds/swift-${{ matrix.swift }}-release/xcode/swift-${{ matrix.swift }}-RELEASE/swift-${{ matrix.swift }}-RELEASE-osx.pkg
-          sudo installer -pkg swift-${{ matrix.swift }}-RELEASE-osx.pkg -target /
+          if ! command -v xcode-select &> /dev/null; then
+            xcode-select --install
+            wget https://swift.org/builds/swift-${{ matrix.swift }}-release/xcode/swift-${{ matrix.swift }}-RELEASE/swift-${{ matrix.swift }}-RELEASE-osx.pkg
+            sudo installer -pkg swift-${{ matrix.swift }}-RELEASE-osx.pkg -target /
+          fi
 
       - name: Verify Swift Version
         run: swift --version
