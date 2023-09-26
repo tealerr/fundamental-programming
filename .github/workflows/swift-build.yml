@@ -8,11 +8,23 @@ on:
 
 jobs:
   build:
-    runs-on: macos-12
-
+    name: Swift ${{ matrix.swift }} on ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        swift: ["5.6", "5.8"]
+    runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
-
+      - uses: swift-actions/setup-swift@65540b95f51493d65f5e59e97dcef9629ddf11bf
+        with:
+          swift-version: ${{ matrix.swift }}
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: /Swift
       - name: Build
+        working-directory: /Swift
         run: swift build
-        working-directory: Swift
+      - name: Run tests
+        working-directory: /Swift
+        run: swift test
