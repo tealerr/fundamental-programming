@@ -1,6 +1,6 @@
 // สร้าง function เพื่อคำนวณเกรด โดยใช้ if และ else-if
-func gradeCal(score: Int) -> Character {
-    var grade: Character
+func gradeCal(score: Int) -> String {
+    let grade: String
 
     if score >= 80 {
         grade = "A" // if true, grade =80, false ไปเงื่อนไขต่อไป
@@ -14,8 +14,8 @@ func gradeCal(score: Int) -> Character {
 }
 
 // แสดงเกรดที่ส่งมาจาก func  พร้อมข้อความ
-func showGrade(grade: Character) -> String {
-    var message: String
+func showGrade(grade: String) -> String {
+    let message: String
 
     switch grade {
     case "A":
