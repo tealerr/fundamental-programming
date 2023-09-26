@@ -15,16 +15,39 @@ jobs:
         swift: ["5.2", "5.3"]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: swift-actions/setup-swift@65540b95f51493d65f5e59e97dcef9629ddf11bf
-        with:
-          swift-version: ${{ matrix.swift }}
       - name: Checkout
         uses: actions/checkout@v4
         with:
           path: /Swift
+
+      - name: Install Swift (Ubuntu)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            clang \
+            libicu-dev \
+            libcurl4-openssl-dev \
+            libssl-dev
+          wget https://swift.org/builds/swift-${{ matrix.swift }}-release/ubuntu2004/swift-${{ matrix.swift }}-RELEASE/swift-${{ matrix.swift }}-RELEASE-ubuntu20.04.tar.gz
+          tar xzf swift-${{ matrix.swift }}-RELEASE-ubuntu20.04.tar.gz
+          sudo mv swift-${{ matrix.swift }}-RELEASE-ubuntu20.04 /usr/local/swift
+          echo 'export PATH=/usr/local/swift/usr/bin:$PATH' >> $HOME/.bashrc
+
+      - name: Install Swift (macOS)
+        if: matrix.os == 'macos-latest'
+        run: |
+          xcode-select --install
+          wget https://swift.org/builds/swift-${{ matrix.swift }}-release/xcode/swift-${{ matrix.swift }}-RELEASE/swift-${{ matrix.swift }}-RELEASE-osx.pkg
+          sudo installer -pkg swift-${{ matrix.swift }}-RELEASE-osx.pkg -target /
+
+      - name: Verify Swift Version
+        run: swift --version
+
       - name: Build
         working-directory: /Swift
         run: swift build
+
       - name: Run tests
         working-directory: /Swift
         run: swift test
