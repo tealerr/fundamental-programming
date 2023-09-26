@@ -7,16 +7,16 @@ let package = Package(
     name: "MySwiftPackage",
     products: [
         .library(
-            name: "Swift",
-            targets: ["Swift"])
+            name: "MyLibrary", // Change the name to something other than "Swift"
+            targets: ["MyLibrary"])
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Swift"),
+            name: "MyLibrary"), // Change the name to something other than "Swift"
         .testTarget(
-            name: "SwiftTests",
-            dependencies: ["Swift"])
+            name: "MyLibraryTests",
+            dependencies: ["MyLibrary"])
     ]
 )
