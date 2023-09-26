@@ -17,8 +17,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          path: Swift
 
       - name: Install Swift (Ubuntu)
         if: matrix.os == 'ubuntu-latest'
@@ -45,9 +43,7 @@ jobs:
         run: swift --version
 
       - name: Build
-        working-directory: Swift/
         run: swift build
 
       - name: Run tests
-        working-directory: Swift/
         run: swift test
