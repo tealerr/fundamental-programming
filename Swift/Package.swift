@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Swift",
+    name: "MySwiftPackage",
     products: [
         .library(
             name: "Swift",
