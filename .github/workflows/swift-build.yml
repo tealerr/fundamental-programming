@@ -45,7 +45,9 @@ jobs:
         run: swift --version
 
       - name: Build
+        working-directory: Swift
         run: swift build
 
       - name: Run tests
+        working-directory: Swift
         run: swift test
