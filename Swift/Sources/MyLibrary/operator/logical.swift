@@ -1,61 +1,76 @@
-var myInt1 = 5
-var myInt2 = 10
+func logicBoolean() {
+    let myBool1 = true
+    let myBool2 = false
 
-var myFloat1: Float = 5.5
-var myFloat2: Float = 10.0
+    print("\(myBool1) && \(myBool2) =", myBool1 && myBool2)
+    print("\(myBool1) || \(myBool2) =", myBool1 || myBool2)
+    print("!\(myBool1) =", !myBool1)
+    print("!\(myBool2) =", !myBool2)
+    print("\n")
+}
 
-var myDouble1: Double = 7.2
-var myDouble2: Double = 3.8
+func logicNumber() {
+    let myInt1 = 5
+    let myInt2 = 10
 
-var myStr1 = "Hello"
-var myStr2 = "World"
+    print("\(myInt1) == \(myInt2) =", myInt1 == myInt2)
+    print("\(myInt1) != \(myInt2) =", myInt1 != myInt2)
+    print("\(myInt1) > \(myInt2) =", myInt1 > myInt2)
+    print("\(myInt1) < \(myInt2) =", myInt1 < myInt2)
+    print("\(myInt1) >= \(myInt2) =", myInt1 >= myInt2)
+    print("\(myInt1) <= \(myInt2) =", myInt1 <= myInt2)
+    print("\n")
+}
 
-var myChar1: Character = "A"
-var myChar2: Character = "B"
+func logicFloat() {
+    let myFloat1: Float = 5.5
+    let myFloat2: Float = 10.0
 
-var myBool1 = true
-var myBool2 = false
+    print("\(myFloat1) == \(myFloat2) =", myFloat1 == myFloat2)
+    print("\(myFloat1) != \(myFloat2) =", myFloat1 != myFloat2)
+    print("\(myFloat1) > \(myFloat2) =", myFloat1 > myFloat2)
+    print("\(myFloat1) < \(myFloat2) =", myFloat1 < myFloat2)
+    print("\(myFloat1) >= \(myFloat2) =", myFloat1 >= myFloat2)
+    print("\(myFloat1) <= \(myFloat2) =", myFloat1 <= myFloat2)
+    print("\n")
+}
 
-// Logical AND operator (&&)
-print("Boolean Logic")
-print("\(myBool1) && \(myBool2) =", myBool1 && myBool2)
-print("\n")
+func logicDouble() {
+    let myDouble1: Double = 7.2
+    let myDouble2: Double = 3.8
 
-// Logical OR operator (||)
-print("\(myBool1) || \(myBool2) =", myBool1 || myBool2)
-print("\n")
+    print("\(myDouble1) == \(myDouble2) =", myDouble1 == myDouble2)
+    print("\(myDouble1) != \(myDouble2) =", myDouble1 != myDouble2)
+    print("\(myDouble1) > \(myDouble2) =", myDouble1 > myDouble2)
+    print("\(myDouble1) < \(myDouble2) =", myDouble1 < myDouble2)
+    print("\(myDouble1) >= \(myDouble2) =", myDouble1 >= myDouble2)
+    print("\(myDouble1) <= \(myDouble2) =", myDouble1 <= myDouble2)
+    print("\n")
+}
 
-// Logical NOT operator (!)
-print("!\(myBool1) =", !myBool1)
-print("!\(myBool2) =", !myBool2)
-print("\n")
+func logicString() {
+    let myStr1 = "Hello"
+    let myStr2 = "World"
 
-// Logical operators with integers
-print("Number Logic")
-print("\(myInt1) > 0 && \(myInt2) < 20 =", myInt1 > 0 && myInt2 < 20)
-print("\(myInt1) > 0 || \(myInt2) < 20 =", myInt1 > 0 || myInt2 < 20)
-print("\n")
+    print("\(myStr1) == \(myStr2) =", myStr1 == myStr2)
+    print("\(myStr1) != \(myStr2) =", myStr1 != myStr2)
+    print("\n")
+}
 
-// Logical operators with floats
-print("Float Logic")
-print("\(myFloat1) > 0.0 && \(myFloat2) < 15.0 =", myFloat1 > 0.0 && myFloat2 < 15.0)
-print("\(myFloat1) > 0.0 || \(myFloat2) < 15.0 =", myFloat1 > 0.0 || myFloat2 < 15.0)
-print("\n")
+func logicCharacter() {
+    let myChar1: Character = "A"
+    let myChar2: Character = "B"
 
-// Logical operators with doubles
-print("Double Logic")
-print("\(myDouble1) > 0.0 && \(myDouble2) < 10.0 =", myDouble1 > 0.0 && myDouble2 < 10.0)
-print("\(myDouble1) > 0.0 || \(myDouble2) < 10.0 =", myDouble1 > 0.0 || myDouble2 < 10.0)
-print("\n")
+    print("\(myChar1) == \(myChar2) =", myChar1 == myChar2)
+    print("\(myChar1) != \(myChar2) =", myChar1 != myChar2)
+    print("\n")
+}
 
-// Logical operators with strings
-print("String Logic")
-print("\(myStr1) == \"Hello\" && \(myStr2) == \"World\" =", myStr1 == "hello" && myStr2 == "World")
-print("\(myStr1) == \"Hello\" || \(myStr2) == \"Universe\" =", myStr1 == "Hello" || myStr2 == "Universe")
-print("\n")
-
-// Logical operators with characters
-print("Character Logic")
-print("\(myChar1) == \"C\" && \(myChar2) == \"B\" =", myChar1 == "C" && myChar2 == "B")
-print("\(myChar1) == \"A\" || \(myChar2) == \"C\" =", myChar1 == "A" || myChar2 == "C")
-print("\n")
+func datatypeLogic() {
+    logicBoolean()
+    logicNumber()
+    logicFloat()
+    logicDouble()
+    logicString()
+    logicCharacter()
+}
