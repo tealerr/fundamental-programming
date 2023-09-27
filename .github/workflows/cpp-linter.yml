@@ -26,14 +26,9 @@ jobs:
           sudo apt-get install -y g++-11 clang-format
         shell: bash
 
-      - name: clang-format lint
-        uses: DoozyX/clang-format-lint-action@v0.16.2
-        with:
-          exclude: >-
-            '^build/'
-            '^CMakeFiles/'
-            'CMakeCXXCompilerId\.cpp$'
-            'CMakeCCompilerId\.c$'
+      - name: Run clang-format
+        run: |
+          find . -type f \( -name "*.cpp" -o -name "*.h" -o -name "*.cxx" \) -not -path "./build/*" -exec clang-format -i {} \;
 
       - name: Run linters
         uses: wearerequired/lint-action@v2
