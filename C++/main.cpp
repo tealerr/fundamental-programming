@@ -1,4 +1,11 @@
+#include "condition.h"
+#include <iostream>
+using namespace std;
+
 int main() {
-  // Your code here
+
+  char grade = GradeCalWithIf(80);
+  cout << "Hello C++ World" << grade << endl;
+
   return 0;
 }
