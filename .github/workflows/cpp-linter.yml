@@ -28,9 +28,12 @@ jobs:
 
       - name: clang-format lint
         uses: DoozyX/clang-format-lint-action@v0.16.2
-
-      # - name: Install ClangFormat
-      #   run: sudo apt-get install -y clang-format
+        with:
+          exclude: >-
+            '^build/'
+            '^CMakeFiles/'
+            'CMakeCXXCompilerId\.cpp$'
+            'CMakeCCompilerId\.c$'
 
       - name: Run linters
         uses: wearerequired/lint-action@v2

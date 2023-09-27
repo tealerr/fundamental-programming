@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-int main(int argc, char *argv[]) {
+int main() {
 
   char grade = GradeCalWithIf(80);
   cout << "Hello C++ World" << grade << endl;
