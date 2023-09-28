@@ -3,9 +3,9 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/JavaScript"
     schedule:
       interval: "daily"
-      time: "13:37"
+      time: "13:40"
       timezone: "Asia/Bangkok"
     open-pull-requests-limit: 10
