@@ -21,13 +21,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up Java
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
-          distribution: "adopt"
-          java-version: "11"
-
-      - name: Build with Maven
-        run: mvn clean install
+          distribution: "temurin" # See 'Supported distributions' for available options
+          java-version: "17"
 
       - name: Run Ngrok
         run: |
