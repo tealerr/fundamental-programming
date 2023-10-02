@@ -26,10 +26,6 @@ jobs:
           distribution: "temurin" # See 'Supported distributions' for available options
           java-version: "17"
 
-      - name: Run Ngrok
-        run: |
-          ngrok http 9000
-
       - name: Run SonarQube Scan
         run: mvn sonar:sonar -Dsonar.host.url=https://2c3a-2405-9800-bc92-71bc-d953-fabf-3a6c-f87b.ngrok-free.app/ -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
