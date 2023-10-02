@@ -9,6 +9,13 @@ jobs:
   sonarqube:
     runs-on: ubuntu-latest
 
+    services:
+      ngrok:
+        image: wernight/ngrok
+        ports:
+          - 4040:4040
+          - 9000:9000
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -22,14 +29,12 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
-      - name: Start Ngrok
+      - name: Run Ngrok
         run: |
-          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-          unzip ngrok-stable-linux-amd64.zip
-          ./ngrok http 80 > ngrok.log &
+          ngrok http 9000
 
       - name: Run SonarQube Scan
-        run: mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: mvn sonar:sonar -Dsonar.host.url=https://2c3a-2405-9800-bc92-71bc-d953-fabf-3a6c-f87b.ngrok-free.app/ -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
       - name: Stop Ngrok
         run: pkill ngrok
