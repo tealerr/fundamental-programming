@@ -10,7 +10,6 @@ jobs:
   sonarqube:
     runs-on:
       - self-hosted
-      - label-1
 
     services:
       ngrok:
