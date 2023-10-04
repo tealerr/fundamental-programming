@@ -23,6 +23,7 @@ jobs:
         uses: SonarSource/sonarcloud-github-c-cpp@v1
 
       - name: Run build-wrapper
+        working-directory: C++
         run: |
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} make -f Makefile pkg-posix-nightly HOST_ARCH=$(uname -m)
 
