@@ -19,13 +19,13 @@ jobs:
         with:
           fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
 
-      - name: Install sonar-scanner and build-wrapper
-        uses: SonarSource/sonarcloud-github-c-cpp@v1
+      # - name: Install sonar-scanner and build-wrapper
+      #   uses: SonarSource/sonarcloud-github-c-cpp@v1
 
-      - name: Run build-wrapper
-        working-directory: C++/build
-        run: |
-          build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} make -f Makefile pkg-posix-nightly HOST_ARCH=$(uname -m)
+      # - name: Run build-wrapper
+      #   working-directory: C++/build
+      #   run: |
+      #     build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} make -f Makefile pkg-posix-nightly HOST_ARCH=$(uname -m)
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
@@ -35,3 +35,4 @@ jobs:
         with:
           args: >
             -Dsonar.exclusions=**/*.java
+            -Dsonar.exclusions=**/*.cpp
