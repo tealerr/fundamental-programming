@@ -1,35 +1,20 @@
-name: SonarQube Scan
-
+name: SonarCloud
 on:
-  # push:
-  #   branches:
-  #     - main
-  workflow_dispatch:
-
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
-  sonarqube:
-    runs-on:
-      - self-hosted
-
-    services:
-      ngrok:
-        image: wernight/ngrok
-        ports:
-          - 4040:4040
-          - 9000:9000
-
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up Java
-        uses: actions/setup-java@v3
+      - uses: actions/checkout@v3
         with:
-          distribution: "temurin" # See 'Supported distributions' for available options
-          java-version: "17"
-
-      - name: Run SonarQube Scan
-        run: mvn sonar:sonar -Dsonar.host.url=https://2c3a-2405-9800-bc92-71bc-d953-fabf-3a6c-f87b.ngrok-free.app/ -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-
-      - name: Stop Ngrok
-        run: pkill ngrok
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
