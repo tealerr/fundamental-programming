@@ -35,3 +35,6 @@ jobs:
         with:
           args: >
             -Dsonar.exclusions=**/*.java,**/*.cpp
+            -Dsonar.c.file.suffixes=-
+            -Dsonar.cpp.file.suffixes=-
+            -Dsonar.objc.file.suffixes=-
