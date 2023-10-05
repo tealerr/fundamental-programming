@@ -30,8 +30,9 @@ jobs:
 
       - name: Run build-wrapper
         run: |
+          cd ./build-wrapper/build-wrapper-linux-x86
           ls -l
-          ./build-wrapper/build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir C++ cmake build
+        # ./build-wrapper/build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir C++ cmake build
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
