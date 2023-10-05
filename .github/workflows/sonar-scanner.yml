@@ -22,7 +22,7 @@ jobs:
           wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
           unzip build-wrapper-linux-x86.zip
           mkdir build-wrapper
-          mv build-wrapper-linux-x86/* build-wrapper/
+          mv build-wrapper-linux-x86 build-wrapper/
           chmod +x build-wrapper/build-wrapper-linux-x86-64
 
       - name: Configure CMake
