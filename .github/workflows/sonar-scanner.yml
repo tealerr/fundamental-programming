@@ -30,23 +30,12 @@ jobs:
           ls -l build-wrapper
           ls -l build-wrapper/build-wrapper-linux-x86
 
-      - name: Debugging
-        run: |
-          pwd
-          ls -l
-          ls -l build-wrapper
-          ls -l build-wrapper/build-wrapper-linux-x86-64
-          cd build-wrapper
-          ls -l build-wrapper-linux-x86-64
-
       - name: Configure CMake
         run: cmake -B C++/build -S C++/.
 
       - name: Run build-wrapper
         run: |
-          cd ./build-wrapper/build-wrapper-linux-x86
-          ls -l
-        # ./build-wrapper/build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir C++ cmake build
+          ./build-wrapper/build-wrapper-linux-x86-64 --out-dir C++ cmake build
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
