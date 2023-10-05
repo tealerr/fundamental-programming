@@ -11,13 +11,11 @@ jobs:
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
-    env:
-      BUILD_WRAPPER_OUT_DIR: C++/
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0
 
       - name: Install build-wrapper
         run: |
@@ -42,7 +40,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.exclusions=**/*.java,**/*.cpp
+            -Dsonar.exclusions=**/*.java
             -Dsonar.c.file.suffixes=-
             -Dsonar.cpp.file.suffixes=-
             -Dsonar.objc.file.suffixes=-
