@@ -12,20 +12,27 @@ jobs:
     name: SonarCloud
     runs-on: ubuntu-latest
     env:
-      BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory
+      BUILD_WRAPPER_OUT_DIR: build
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
 
-      # - name: Install sonar-scanner and build-wrapper
-      #   uses: SonarSource/sonarcloud-github-c-cpp@v1
+      - name: Install build-wrapper
+        run: |
+          wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
+          unzip build-wrapper-linux-x86.zip
+          chmod +x build-wrapper-linux-x86-64
 
-      # - name: Run build-wrapper
-      #   working-directory: C++/build
-      #   run: |
-      #     build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} make -f Makefile pkg-posix-nightly HOST_ARCH=$(uname -m)
+      - name: Configure CMake
+        run: cmake -B C++/build -S C++/.
+
+      - name: Run build-wrapper
+        run: |
+          cd C++/build
+          ../build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake build
+        working-directory: C++
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
