@@ -31,6 +31,15 @@ jobs:
           pwd
           ls -l build-wrapper-linux-x86-64
 
+      - name: Debugging
+        run: |
+          pwd
+          ls -l
+          ls -l build-wrapper
+          ls -l build-wrapper/build-wrapper-linux-x86-64
+          cd build-wrapper
+          ls -l build-wrapper-linux-x86-64
+
       - name: Configure CMake
         run: cmake -B C++/build -S C++/.
 
