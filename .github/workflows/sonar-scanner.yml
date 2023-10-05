@@ -24,9 +24,11 @@ jobs:
           wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
           unzip build-wrapper-linux-x86.zip
           chmod +x build-wrapper-linux-x86-64
+        working-directory: C++
 
       - name: Configure CMake
         run: cmake -B C++/build -S C++/.
+        working-directory: C++
 
       - name: Run build-wrapper
         run: |
