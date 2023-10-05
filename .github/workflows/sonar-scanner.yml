@@ -25,10 +25,10 @@ jobs:
           mv build-wrapper-linux-x86/* build-wrapper/
           chmod +x build-wrapper/build-wrapper-linux-x86-64
 
-      - name: list files in build-wrapper-linux-x86-64
-        run: |
-          ls -l build-wrapper
-          ls -l build-wrapper/build-wrapper-linux-x86
+      # - name: list files in build-wrapper-linux-x86-64
+      #   run: |
+      #     ls -l build-wrapper
+      #     ls -l build-wrapper/build-wrapper-linux-x86
 
       - name: Configure CMake
         run: cmake -B C++/build -S C++/.
