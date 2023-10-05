@@ -27,9 +27,8 @@ jobs:
 
       - name: list files in build-wrapper-linux-x86-64
         run: |
-          cd build-wrapper/build-wrapper-linux-x86-64
-          pwd
-          ls -l build-wrapper-linux-x86-64
+          ls -l build-wrapper
+          ls -l build-wrapper/build-wrapper-linux-x86
 
       - name: Debugging
         run: |
