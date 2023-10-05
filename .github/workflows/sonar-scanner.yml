@@ -32,7 +32,7 @@ jobs:
 
       - name: Run build-wrapper
         run: |
-          C++/build-wrapper/build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake build
+          ./build-wrapper/build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake build
         working-directory: C++
 
       - name: SonarCloud Scan
