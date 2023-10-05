@@ -23,8 +23,10 @@ jobs:
           unzip build-wrapper-linux-x86.zip
           mkdir build-wrapper
           mv build-wrapper-linux-x86/* build-wrapper/
-          ls -l build-wrapper-linux-x86
           chmod +x build-wrapper/build-wrapper-linux-x86-64
+
+      - name: list file in build-wrapper-linux-x86
+        run: ls -l build-wrapper-linux-x86
 
       - name: Configure CMake
         run: cmake -B C++/build -S C++/.
