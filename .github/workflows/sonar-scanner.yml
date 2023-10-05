@@ -17,9 +17,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Ensure C++ directory exists
-        run: mkdir -p C++
-
       - name: Install build-wrapper
         run: |
           wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
@@ -33,6 +30,7 @@ jobs:
 
       - name: Run build-wrapper
         run: |
+          ls -l
           ./build-wrapper/build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir C++ cmake build
 
       - name: SonarCloud Scan
