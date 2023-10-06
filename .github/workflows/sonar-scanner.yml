@@ -28,7 +28,10 @@ jobs:
       - name: Configure and Build
         run: |
           cmake -B C++/build -S C++/.
-          ./C++/build/build-wrapper-linux-x86-64 --out-dir C++ cmake --build C++/build
+          cmake --build C++/build
+
+      - name: Run build-wrapper
+        run: ./C++/build/build-wrapper-linux-x86-64 --out-dir C++ cmake --build C++/build
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
