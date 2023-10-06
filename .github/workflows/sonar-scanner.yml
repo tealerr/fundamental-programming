@@ -18,15 +18,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Configure CMake
+        run: cmake -B C++/build -S C++/.
+
       - name: Install build-wrapper
         run: |
           wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
           unzip build-wrapper-linux-x86.zip
           mv build-wrapper-linux-x86/* C++/build/
           chmod +x C++/build/build-wrapper-linux-x86-64
-
-      - name: Configure CMake
-        run: cmake -B C++/build -S C++/.
 
       - name: Run build-wrapper
         run: ./C++/build/build-wrapper-linux-x86-64 --out-dir C++ cmake --build build
