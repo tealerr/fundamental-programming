@@ -25,7 +25,10 @@ jobs:
           chmod +x C++/build-wrapper-linux-x86-64
 
       - name: Configure CMake
-        run: cmake -B C++/ -S C++/.
+        run: |
+          cd C++/
+          cmake .
+        working-directory: /Users/teeramate.kan/playground/fundamental-programming
 
       - name: Run build-wrapper
         run: |
