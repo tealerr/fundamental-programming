@@ -25,11 +25,11 @@ jobs:
           mv build-wrapper-linux-x86/* C++/build/
           chmod +x C++/build/build-wrapper-linux-x86-64
 
-      - name: Configure and Build
-        run: |
-          cd C++/
-          cmake -B build -S .
-          cmake --build build
+      - name: Configure
+        run: cd C++/ && cmake -B build -S .
+
+      - name: Build
+        run: cd C++/build/ && make
 
       - name: Run build-wrapper
         run: C++/build/build-wrapper-linux-x86-64 --out-dir C++ cmake --build C++/build
