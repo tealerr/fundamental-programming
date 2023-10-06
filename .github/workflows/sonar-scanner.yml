@@ -26,7 +26,6 @@ jobs:
 
       - name: Configure CMake
         run: cmake -B C++/ -S C++/.
-        working-directory: /Users/teeramate.kan/playground/fundamental-programming/C++
 
       - name: Run build-wrapper
         run: |
