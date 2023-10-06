@@ -27,11 +27,12 @@ jobs:
 
       - name: Configure and Build
         run: |
-          cmake -B ${{ github.workspace }}/C++/build -S ${{ github.workspace }}/C++/.
-          cmake --build ${{ github.workspace }}/C++/build
+          cd C++/
+          cmake -B build -S .
+          cmake --build build
 
       - name: Run build-wrapper
-        run: ${{ github.workspace }}/C++/build/build-wrapper-linux-x86-64 --out-dir C++ cmake --build ${{ github.workspace }}/C++/build
+        run: C++/build/build-wrapper-linux-x86-64 --out-dir C++ cmake --build C++/build
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
