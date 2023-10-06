@@ -18,9 +18,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Copy CMakeCache.txt
-        run: cp C++/build/CMakeCache.txt C++/build/
-
       - name: Install build-wrapper
         run: |
           wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
