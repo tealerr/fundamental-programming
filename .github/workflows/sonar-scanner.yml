@@ -24,22 +24,18 @@ jobs:
           mv build-wrapper-linux-x86/* C++/build/
           chmod +x C++/build/build-wrapper-linux-x86-64
 
-      # - name: list files in build-wrapper-linux-x86-64
-      #   run: |
-      #     ls -l build-wrapper
-      #     ls -l build-wrapper/build-wrapper-linux-x86
-
       - name: Configure CMake
         run: cmake -B C++/build -S C++/.
 
       - name: Run build-wrapper
         run: |
-          ./C++/build/build-wrapper-linux-x86-64 --out-dir C++ cmake build
+          cd C++/build
+          ../build-wrapper-linux-x86-64 --out-dir . cmake build .
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
@@ -47,5 +43,3 @@ jobs:
             -Dsonar.c.file.suffixes=-
             -Dsonar.cpp.file.suffixes=-
             -Dsonar.objc.file.suffixes=-
-
-              C++/build/CMakeCache.txt
