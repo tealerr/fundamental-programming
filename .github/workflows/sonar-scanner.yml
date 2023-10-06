@@ -26,7 +26,7 @@ jobs:
           chmod +x C++/build/build-wrapper-linux-x86-64
 
       - name: Configure
-        run: cd C++/ && cmake -B build -S .
+        run: cd C++/ && cmake -B C++/build -S .
 
       - name: Build
         run: cd C++/build/ && make
