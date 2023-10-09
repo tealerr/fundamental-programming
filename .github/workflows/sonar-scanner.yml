@@ -31,8 +31,8 @@ jobs:
           sudo add-apt-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
           sudo apt-get install -y cmake
 
-      - name: Clean CMake Cache
-        run: cd C++/build1 && cmake --clean-first .
+      - name: Remove CMake Build Directory
+        run: rm -rf C++/build1/
 
       - name: Configure
         run: cd C++/build1 && cmake ..
