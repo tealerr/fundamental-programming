@@ -45,3 +45,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.projectKey=tealerr_fundamental-programming
+            -Dsonar.projectName=tealerr_fundamental-programming
+            -Dsonar.projectVersion=1.0
+            -Dsonar.sources=C++
