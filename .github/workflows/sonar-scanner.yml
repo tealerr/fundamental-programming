@@ -39,11 +39,8 @@ jobs:
       - name: Verify CMakeCache.txt
         run: ls C++/build1/CMakeCache.txt
 
-      - name: Build
-        run: cmake --build C++/build1/
-
-      - name: Run clean build for build-wrapper
-        run: C++/build1/build-wrapper-linux-x86-64 --out-dir C++/bw-output /usr/bin/cmake --build C++/build1 --target clean
+      - name: Clean Build
+        run: cmake --build C++/build1/ --target clean
 
       - name: Run build-wrapper
         run: C++/build1/build-wrapper-linux-x86-64 --out-dir C++/bw-output /usr/bin/cmake --build C++/build1
