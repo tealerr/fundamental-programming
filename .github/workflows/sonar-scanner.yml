@@ -32,19 +32,14 @@ jobs:
           sudo add-apt-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
           sudo apt-get install -y cmake
 
-      - name: Debug Directory Contents
-        run: ls -R C++
-
       - name: Copy CMakeCache.txt
         run: cp C++/CMakeCache.txt C++/build/
 
       - name: Configure
-        run: |
-          cd C++/build
-          cmake ..
+        run: cd C++/build && cmake ..
 
       - name: Build
-        run: cd C++/build/ && /usr/bin/cmake --build .
+        run: cd C++/build && cmake --build .
 
       - name: Run build-wrapper
         run: C++/build/build-wrapper-linux-x86-64 --out-dir C++ /usr/bin/cmake --build C++/build
