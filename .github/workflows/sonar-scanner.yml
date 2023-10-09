@@ -18,6 +18,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Clean Build Directory
+        run: rm -rf C++/build
+
       - name: Install build-wrapper
         run: |
           wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
@@ -25,18 +28,8 @@ jobs:
           mv build-wrapper-linux-x86/* C++/build/
           chmod +x C++/build/build-wrapper-linux-x86-64
 
-      - name: Install CMake
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y software-properties-common
-          sudo add-apt-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
-          sudo apt-get install -y cmake
-
-      - name: Configure
-        run: cd C++/ && cmake -B build -S .
-
-      - name: Build
-        run: cd C++/build/ && make
+      - name: Configure CMake
+        run: cd C++/ && cmake -B ${{ github.workspace }}/C++/build -S ${{ github.workspace }}/C++/.
 
       - name: Run build-wrapper
         run: C++/build/build-wrapper-linux-x86-64 --out-dir C++ cmake --build C++/build
