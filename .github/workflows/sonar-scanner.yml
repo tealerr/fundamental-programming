@@ -32,6 +32,9 @@ jobs:
           sudo add-apt-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
           sudo apt-get install -y cmake
 
+      - name: Debug Directory Contents
+        run: ls -R C++
+
       - name: Copy CMakeCache.txt
         run: cp C++/CMakeCache.txt C++/build/
 
