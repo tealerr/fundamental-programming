@@ -22,8 +22,8 @@ jobs:
         run: |
           wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
           unzip build-wrapper-linux-x86.zip
-          mv build-wrapper-linux-x86/* C++/build/
-          chmod +x C++/build/build-wrapper-linux-x86-64
+          mv build-wrapper-linux-x86/* C++/build1/
+          chmod +x C++/build1/build-wrapper-linux-x86-64
 
       - name: Install CMake
         run: |
@@ -33,19 +33,19 @@ jobs:
           sudo apt-get install -y cmake
 
       - name: Configure
-        run: cd C++/build && cmake ..
+        run: cd C++/build1 && cmake ..
 
       - name: Verify CMakeCache.txt
-        run: ls C++/build/CMakeCache.txt
+        run: ls C++/build1/CMakeCache.txt
 
       - name: Copy CMakeCache.txt
-        run: cp C++/build/CMakeCache.txt C++/
+        run: cp C++/build1/CMakeCache.txt C++/build1/
 
       - name: Build
-        run: cd C++/build && cmake --build .
+        run: cd C++/build1 && cmake --build .
 
       - name: Run build-wrapper
-        run: C++/build/build-wrapper-linux-x86-64 --out-dir C++ /usr/bin/cmake --build C++/build
+        run: C++/build1/build-wrapper-linux-x86-64 --out-dir C++/build1 /usr/bin/cmake --build C++/build1
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
