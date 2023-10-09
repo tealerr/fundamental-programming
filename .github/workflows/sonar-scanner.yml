@@ -54,7 +54,6 @@ jobs:
             -Dsonar.sources=C++
             -Dsonar.cfamily.build-wrapper-output=bw-output
             -Dsonar.exclusions=**/*.java
-            -Dsonar.inclusions=**/*.cpp
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
