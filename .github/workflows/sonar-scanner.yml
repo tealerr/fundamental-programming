@@ -26,7 +26,9 @@ jobs:
           chmod +x C++/build/build-wrapper-linux-x86-64
 
       - name: Install CMake
-        run: sudo apt-get update && sudo apt-get install -y cmake=3.21.3
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake=3.20.0
 
       - name: Configure
         run: cd C++/ && cmake -B C++/build -S .
