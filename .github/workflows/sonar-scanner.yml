@@ -32,22 +32,19 @@ jobs:
           sudo apt-get install -y cmake
 
       - name: Set Working Directory
-        run: cd C++/build1/
-
-      - name: Remove CMake Build Directory
-        run: rm -rf *
+        run: cd fundamental-programming/
 
       - name: Configure
-        run: cmake ..
+        run: cmake C++/build1
 
       - name: Verify CMakeCache.txt
-        run: ls CMakeCache.txt
+        run: ls C++/build1/CMakeCache.txt
 
       - name: Build
-        run: cmake --build .
+        run: cmake --build C++/build1/
 
       - name: Run build-wrapper
-        run: build-wrapper-linux-x86-64 --out-dir ../bw-output cmake --build .
+        run: C++/build1/build-wrapper-linux-x86-64 --out-dir C++/bw-output cmake --build C++/build1/
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
@@ -56,7 +53,7 @@ jobs:
             -Dsonar.projectKey=tealerr_fundamental-programming
             -Dsonar.organization=tealerr
             -Dsonar.sources=C++
-            -Dsonar.cfamily.build-wrapper-output=../bw-output
+            -Dsonar.cfamily.build-wrapper-output=C++/bw-output
             -Dsonar.exclusions=**/*.java
 
         env:
