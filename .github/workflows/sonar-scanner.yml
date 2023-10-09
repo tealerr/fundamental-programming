@@ -48,7 +48,7 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=tealerr_fundamental-programming
-            -Dsonar.organization=Teeramet.K
+            -Dsonar.organization=tealerr
             -Dsonar.sources=C++
             -Dsonar.cfamily.build-wrapper-output=C++/bw-output
             -Dsonar.exclusions=**/*.java
