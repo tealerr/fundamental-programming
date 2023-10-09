@@ -38,7 +38,7 @@ jobs:
         run: cd C++/build1 && cmake --build .
 
       - name: Run build-wrapper for C++
-        run: C++/build1/build-wrapper-linux-x86-64 --out-dir C++/build1 /usr/bin/cmake --build C++/build1
+        run: C++/build1/build-wrapper-linux-x86-64 --out-dir C++/bw-output /usr/bin/cmake --build C++/build1
 
       - name: Setup SonarCloud
         uses: sonarsource/sonarcloud-github-action@master
@@ -51,3 +51,4 @@ jobs:
             -Dsonar.projectName=tealerr_fundamental-programming
             -Dsonar.projectVersion=1.0
             -Dsonar.sources=C++
+            -Dsonar.cfamily.build-wrapper-output=C++/bw-output
