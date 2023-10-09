@@ -39,9 +39,6 @@ jobs:
       - name: Verify CMakeCache.txt
         run: ls C++/build1/CMakeCache.txt
 
-      - name: Copy CMakeCache.txt
-        run: cp C++/build1/CMakeCache.txt C++/build1/
-
       - name: Build
         run: cd C++/build1 && cmake --build .
 
