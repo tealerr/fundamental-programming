@@ -31,24 +31,27 @@ jobs:
           sudo add-apt-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
           sudo apt-get install -y cmake
 
-      - name: Configure C++ project
+      - name: Configure
         run: cd C++/build1 && cmake ..
 
-      - name: Build C++ project
+      - name: Verify CMakeCache.txt
+        run: ls C++/build1/CMakeCache.txt
+
+      - name: Build
         run: cd C++/build1 && cmake --build .
 
-      - name: Run build-wrapper for C++
+      - name: Run build-wrapper
         run: C++/build1/build-wrapper-linux-x86-64 --out-dir C++/bw-output /usr/bin/cmake --build C++/build1
 
-      - name: Setup SonarCloud
-        uses: sonarsource/sonarcloud-github-action@master
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        with:
+          args: >
+            -Dsonar.exclusions=**/*.java
+            -Dsonar.c.file.suffixes=-
+            -Dsonar.cpp.file.suffixes=-
+            -Dsonar.objc.file.suffixes=-
+          projectBaseDir: C++/bw-output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          args: >
-            -Dsonar.projectKey=tealerr_fundamental-programming
-            -Dsonar.projectName=tealerr_fundamental-programming
-            -Dsonar.projectVersion=1.0
-            -Dsonar.sources=C++
-            -Dsonar.cfamily.build-wrapper-output=C++/bw-output
