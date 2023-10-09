@@ -33,13 +33,13 @@ jobs:
           sudo apt-get install -y cmake
 
       - name: Configure
-        run: cd C++/ && cmake -B C++/build -S .
+        run: cd C++/ && cmake -B build -S .
 
       - name: Build
-        run: cd C++/build/ && /usr/bin/cmake --build .
+        run: cd C++/build/ && make
 
       - name: Run build-wrapper
-        run: C++/build/build-wrapper-linux-x86-64 --out-dir C++ /usr/bin/cmake --build C++/build
+        run: C++/build/build-wrapper-linux-x86-64 --out-dir C++ cmake --build C++/build
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
