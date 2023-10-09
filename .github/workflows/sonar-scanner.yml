@@ -41,7 +41,7 @@ jobs:
         run: cd C++/build1 && cmake --build .
 
       - name: Run build-wrapper
-        run: C++/build1/build-wrapper-linux-x86-64 --out-dir C++/bw-output /usr/bin/cmake --build C++/build1
+        run: C++/build1/build-wrapper-linux-x86-64 --out-dir C++/bw-output /usr/bin/cmake --build .
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
