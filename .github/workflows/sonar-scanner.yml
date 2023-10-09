@@ -56,5 +56,6 @@ jobs:
             -e SONAR_PROJECT_KEY=tealerr_fundamental-programming \
             -e SONAR_PROJECT_NAME=tealerr_fundamental-programming \
             -e SONAR_PROJECT_VERSION=1.0 \
+            -e BITBUCKET_CLONE_DIR=/usr/src \
             -v "$(pwd):/usr/src" \
             sonarsource/sonarcloud-scan:latest
