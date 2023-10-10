@@ -34,7 +34,7 @@ jobs:
       - name: Configure
         run: |
           cd C++/build1/
-          cmake -DCMAKE_BUILD_TYPE=Release ..
+          cmake ..
 
       - name: Verify CMakeCache.txt
         run: ls C++/build1/CMakeCache.txt
@@ -43,7 +43,7 @@ jobs:
         run: cmake --build C++/build1/ --target clean
 
       - name: Run build-wrapper
-        run: C++/build1/build-wrapper-linux-x86-64 --out-dir bw-output cmake --build .
+        run: C++/build1/build-wrapper-linux-x86-64 --out-dir C++/bw-output /usr/bin/cmake --build C++/build1
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
@@ -52,7 +52,7 @@ jobs:
             -Dsonar.projectKey=tealerr_fundamental-programming
             -Dsonar.organization=tealerr
             -Dsonar.sources=C++
-            -Dsonar.cfamily.build-wrapper-output=bw-output
+            -Dsonar.cfamily.build-wrapper-output=C++/bw-output
             -Dsonar.exclusions=**/*.java
 
         env:
