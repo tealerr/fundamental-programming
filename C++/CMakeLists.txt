@@ -12,6 +12,6 @@ include(CPack)
 
 # Custom clean target
 add_custom_target(clean-all
-    COMMAND ${CMAKE_BUILD_TOOL} clean
-    COMMAND rm -rf ${CMAKE_BINARY_DIR}/*
+    COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target clean
+    COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}/*
 )
