@@ -9,3 +9,9 @@ add_executable(myCmakeCpp main.cpp condition.cpp)
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
+
+# Custom clean target
+add_custom_target(clean-all
+    COMMAND ${CMAKE_BUILD_TOOL} clean
+    COMMAND rm -rf ${CMAKE_BINARY_DIR}/*
+)
