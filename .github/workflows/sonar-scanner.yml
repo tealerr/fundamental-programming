@@ -31,11 +31,16 @@ jobs:
           sudo add-apt-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
           sudo apt-get install -y cmake
 
+      - name: Configure
+        run: |
+          cd C++/build1/
+          cmake ..
+
       - name: Clean Build
-        run: cd C++/build1/ && make clean
+        run: cmake --build C++/build1/ --target clean
 
       - name: Run build-wrapper
-        run: C++/build1/build-wrapper-linux-x86-64 --out-dir bw-output make
+        run: C++/build1/build-wrapper-linux-x86-64 --out-dir bw-output cmake --build .
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
