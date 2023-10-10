@@ -37,13 +37,10 @@ jobs:
           cmake ..
 
       - name: Verify CMake Configuration
-        run: cmake --build . --target clean -- VERBOSE=1
-
-      - name: Clean Build
-        run: make clean
+        run: cmake --build . --target clean-all -- VERBOSE=1
 
       - name: Run build-wrapper
-        run: C++/build1/build-wrapper-linux-x86-64 --out-dir C++/bw-output cmake --build .
+        run: C++/build1/build-wrapper-linux-x86-64 --out-dir C++/bw-output /usr/bin/cmake --build C++/build1
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
