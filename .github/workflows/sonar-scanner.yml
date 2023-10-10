@@ -34,7 +34,10 @@ jobs:
       - name: Configure
         run: |
           cd C++/build1/
-          cmake ..
+          cmake -DCMAKE_BUILD_TYPE=Release ..
+
+      - name: Verify CMakeCache.txt
+        run: ls C++/build1/CMakeCache.txt
 
       - name: Clean Build
         run: cmake --build C++/build1/ --target clean
