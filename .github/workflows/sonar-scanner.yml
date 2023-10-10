@@ -39,6 +39,9 @@ jobs:
       - name: Verify CMakeCache.txt
         run: ls C++/build1/CMakeCache.txt
 
+      - name: Create Output Directory
+        run: mkdir -p /github/workspace/bw-output
+
       - name: Run build-wrapper
         run: C++/build1/build-wrapper-linux-x86-64 --out-dir /github/workspace/bw-output /usr/bin/cmake --build /github/workspace/C++/build1
 
