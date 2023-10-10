@@ -36,10 +36,11 @@ jobs:
           cd C++/build1/
           cmake ..
 
+      - name: Verify CMake Configuration
+        run: cmake --build . --target clean -- VERBOSE=1
+
       - name: Clean Build
-        run: |
-          cmake --build . --target clean
-          rm -rf *
+        run: make clean
 
       - name: Run build-wrapper
         run: C++/build1/build-wrapper-linux-x86-64 --out-dir C++/bw-output cmake --build .
