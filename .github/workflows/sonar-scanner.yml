@@ -45,6 +45,13 @@ jobs:
       - name: List Build Directory
         run: ls C++/build1/
 
+      - name: Capture compile_commands.json
+        run: |
+          find C++/build1/ -name compile_commands.json -exec cp {} . \;
+
+      - name: List Current Directory
+        run: ls
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         with:
