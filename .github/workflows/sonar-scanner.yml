@@ -47,10 +47,7 @@ jobs:
 
       - name: Capture compile_commands.json
         run: |
-          find C++/build1/ -name compile_commands.json -exec cp {} . \;
-
-      - name: List Current Directory
-        run: ls
+          find C++/build1/ -name compile_commands.json -exec cp {} . \
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
@@ -60,7 +57,6 @@ jobs:
             -Dsonar.organization=tealerr
             -Dsonar.sources=C++
             -Dsonar.cfamily.build-wrapper-output=bw-output
-            -Dsonar.cfamily.compile-commands=./compile_commands.json
             -Dsonar.exclusions=**/*.java
 
         env:
