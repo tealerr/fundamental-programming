@@ -57,6 +57,10 @@ jobs:
       - name: List bw-output Directory
         run: ls bw-output/
 
+      - name: Debug Output
+        run: |
+          cat bw-output/build-wrapper-dump.json
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         with:
