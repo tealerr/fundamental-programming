@@ -43,7 +43,7 @@ jobs:
           ../../build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir ../../bw-output make
 
       - name: Check Compilation Commands
-        run: cat C++/build1/compile_commands.json
+        run: cat C++/build1/build/compile_commands.json
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
