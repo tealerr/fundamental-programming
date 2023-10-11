@@ -45,11 +45,11 @@ jobs:
 
       - name: Verify build-wrapper-dump.json existence
         run: |
-          find /github/workspace/ -name build-wrapper-dump.json -exec echo "File found: {}" \;
+          find $GITHUB_WORKSPACE -name build-wrapper-dump.json -exec echo "File found: {}" \;
 
       - name: Copy build-wrapper-dump.json
         run: |
-          find /github/workspace/ -name build-wrapper-dump.json -exec cp {} bw-output/ \;
+          find $GITHUB_WORKSPACE -name build-wrapper-dump.json -exec cp {} bw-output/ \;
 
       - name: List Build Directory
         run: ls C++/build1/
