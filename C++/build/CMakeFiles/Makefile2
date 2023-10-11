@@ -64,10 +64,11 @@ CMAKE_BINARY_DIR = /Users/teeramate.kan/playground/fundamental-programming/C++/b
 
 # The main recursive "all" target.
 all: CMakeFiles/myCmakeCpp.dir/all
+all: operator/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: operator/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -100,7 +101,24 @@ clean: CMakeFiles/ContinuousCoverage.dir/clean
 clean: CMakeFiles/ContinuousMemCheck.dir/clean
 clean: CMakeFiles/ContinuousSubmit.dir/clean
 clean: CMakeFiles/myCmakeCpp.dir/clean
+clean: CMakeFiles/clean-all.dir/clean
+clean: operator/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory operator
+
+# Recursive "all" directory target.
+operator/all: operator/CMakeFiles/operator_lib.dir/all
+.PHONY : operator/all
+
+# Recursive "preinstall" directory target.
+operator/preinstall:
+.PHONY : operator/preinstall
+
+# Recursive "clean" directory target.
+operator/clean: operator/CMakeFiles/operator_lib.dir/clean
+.PHONY : operator/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Experimental.dir
@@ -834,7 +852,7 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 # Target rules for target CMakeFiles/myCmakeCpp.dir
 
 # All Build rule for target.
-CMakeFiles/myCmakeCpp.dir/all:
+CMakeFiles/myCmakeCpp.dir/all: operator/CMakeFiles/operator_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myCmakeCpp.dir/build.make CMakeFiles/myCmakeCpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myCmakeCpp.dir/build.make CMakeFiles/myCmakeCpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/teeramate.kan/playground/fundamental-programming/C++/build/CMakeFiles --progress-num=1,2,3 "Built target myCmakeCpp"
@@ -842,7 +860,7 @@ CMakeFiles/myCmakeCpp.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/myCmakeCpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/teeramate.kan/playground/fundamental-programming/C++/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/teeramate.kan/playground/fundamental-programming/C++/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/myCmakeCpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/teeramate.kan/playground/fundamental-programming/C++/build/CMakeFiles 0
 .PHONY : CMakeFiles/myCmakeCpp.dir/rule
@@ -855,6 +873,58 @@ myCmakeCpp: CMakeFiles/myCmakeCpp.dir/rule
 CMakeFiles/myCmakeCpp.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myCmakeCpp.dir/build.make CMakeFiles/myCmakeCpp.dir/clean
 .PHONY : CMakeFiles/myCmakeCpp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/clean-all.dir
+
+# All Build rule for target.
+CMakeFiles/clean-all.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-all.dir/build.make CMakeFiles/clean-all.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-all.dir/build.make CMakeFiles/clean-all.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/teeramate.kan/playground/fundamental-programming/C++/build/CMakeFiles --progress-num= "Built target clean-all"
+.PHONY : CMakeFiles/clean-all.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/clean-all.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/teeramate.kan/playground/fundamental-programming/C++/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/clean-all.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/teeramate.kan/playground/fundamental-programming/C++/build/CMakeFiles 0
+.PHONY : CMakeFiles/clean-all.dir/rule
+
+# Convenience name for target.
+clean-all: CMakeFiles/clean-all.dir/rule
+.PHONY : clean-all
+
+# clean rule for target.
+CMakeFiles/clean-all.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-all.dir/build.make CMakeFiles/clean-all.dir/clean
+.PHONY : CMakeFiles/clean-all.dir/clean
+
+#=============================================================================
+# Target rules for target operator/CMakeFiles/operator_lib.dir
+
+# All Build rule for target.
+operator/CMakeFiles/operator_lib.dir/all:
+	$(MAKE) $(MAKESILENT) -f operator/CMakeFiles/operator_lib.dir/build.make operator/CMakeFiles/operator_lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f operator/CMakeFiles/operator_lib.dir/build.make operator/CMakeFiles/operator_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/teeramate.kan/playground/fundamental-programming/C++/build/CMakeFiles --progress-num=4,5,6,7 "Built target operator_lib"
+.PHONY : operator/CMakeFiles/operator_lib.dir/all
+
+# Build rule for subdir invocation for target.
+operator/CMakeFiles/operator_lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/teeramate.kan/playground/fundamental-programming/C++/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 operator/CMakeFiles/operator_lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/teeramate.kan/playground/fundamental-programming/C++/build/CMakeFiles 0
+.PHONY : operator/CMakeFiles/operator_lib.dir/rule
+
+# Convenience name for target.
+operator_lib: operator/CMakeFiles/operator_lib.dir/rule
+.PHONY : operator_lib
+
+# clean rule for target.
+operator/CMakeFiles/operator_lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f operator/CMakeFiles/operator_lib.dir/build.make operator/CMakeFiles/operator_lib.dir/clean
+.PHONY : operator/CMakeFiles/operator_lib.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

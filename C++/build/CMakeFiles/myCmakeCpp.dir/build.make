@@ -108,6 +108,7 @@ myCmakeCpp_EXTERNAL_OBJECTS =
 myCmakeCpp: CMakeFiles/myCmakeCpp.dir/main.cpp.o
 myCmakeCpp: CMakeFiles/myCmakeCpp.dir/condition.cpp.o
 myCmakeCpp: CMakeFiles/myCmakeCpp.dir/build.make
+myCmakeCpp: operator/liboperator_lib.a
 myCmakeCpp: CMakeFiles/myCmakeCpp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/teeramate.kan/playground/fundamental-programming/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable myCmakeCpp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myCmakeCpp.dir/link.txt --verbose=$(VERBOSE)

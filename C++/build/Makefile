@@ -523,6 +523,32 @@ myCmakeCpp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myCmakeCpp.dir/build.make CMakeFiles/myCmakeCpp.dir/build
 .PHONY : myCmakeCpp/fast
 
+#=============================================================================
+# Target rules for targets named clean-all
+
+# Build rule for target.
+clean-all: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean-all
+.PHONY : clean-all
+
+# fast build rule for target.
+clean-all/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-all.dir/build.make CMakeFiles/clean-all.dir/build
+.PHONY : clean-all/fast
+
+#=============================================================================
+# Target rules for targets named operator_lib
+
+# Build rule for target.
+operator_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 operator_lib
+.PHONY : operator_lib
+
+# fast build rule for target.
+operator_lib/fast:
+	$(MAKE) $(MAKESILENT) -f operator/CMakeFiles/operator_lib.dir/build.make operator/CMakeFiles/operator_lib.dir/build
+.PHONY : operator_lib/fast
+
 condition.o: condition.cpp.o
 .PHONY : condition.o
 
@@ -610,7 +636,9 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... clean-all"
 	@echo "... myCmakeCpp"
+	@echo "... operator_lib"
 	@echo "... condition.o"
 	@echo "... condition.i"
 	@echo "... condition.s"

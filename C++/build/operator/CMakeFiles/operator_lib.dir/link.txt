@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc liboperator_lib.a CMakeFiles/operator_lib.dir/arithmetic.cpp.o CMakeFiles/operator_lib.dir/assignment.cpp.o CMakeFiles/operator_lib.dir/logical.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib liboperator_lib.a
