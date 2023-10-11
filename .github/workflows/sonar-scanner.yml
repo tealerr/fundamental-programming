@@ -42,14 +42,16 @@ jobs:
           cd C++/build1/
           ../../build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir ../../bw-output make
 
+      - name: Verify compile_commands.json existence
+        run: |
+          find C++/build1/ -name compile_commands.json -exec echo "File found: {}" \;
+
+      - name: Copy compile_commands.json
+        run: |
+          if [ -f C++/build1/compile_commands.json ]; then cp C++/build1/compile_commands.json .; else echo "compile_commands.json not found"; fi
+
       - name: List Build Directory
         run: ls C++/build1/
-
-      - name: Capture compile_commands.json
-        run: cp C++/build1/compile_commands.json .
-
-      - name: List Current Directory
-        run: ls
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
@@ -59,7 +61,6 @@ jobs:
             -Dsonar.organization=tealerr
             -Dsonar.sources=C++
             -Dsonar.cfamily.build-wrapper-output=bw-output
-            -Dsonar.cfamily.compile-commands=compile_commands.json
             -Dsonar.exclusions=**/*.java
 
         env:
