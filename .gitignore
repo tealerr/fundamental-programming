@@ -32,5 +32,6 @@ JavaScript/node_modules
 
 # Ignore Gradle project-specific cache directory
 .gradle
+app/
 
 # Ignore Gradle build output directory
