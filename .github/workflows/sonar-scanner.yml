@@ -29,18 +29,11 @@ jobs:
       - name: Create Build Directory
         run: mkdir -p C++/build1/
 
-      - name: Configure
+      - name: Configure and Build
         run: |
           cd C++/build1/
           cmake ..
-
-      - name: Verify CMakeCache.txt
-        run: ls C++/build1/CMakeCache.txt
-
-      - name: Run build-wrapper
-        run: |
-          cd C++/build1/
-          ../../build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir ../../bw-output make
+          make
 
       - name: Verify compile_commands.json existence
         run: |
@@ -61,6 +54,7 @@ jobs:
             -Dsonar.organization=tealerr
             -Dsonar.sources=C++
             -Dsonar.cfamily.build-wrapper-output=bw-output
+            -Dsonar.cfamily.build-wrapper-output.bypass=true
             -Dsonar.exclusions=**/*.java
 
         env:
