@@ -42,7 +42,7 @@ jobs:
           cd C++/build1/
           ../../build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir ../../bw-output make
 
-      - name: List Build Directory
+      - name: List Build Directory Before Find
         run: ls C++/build1/
 
       - name: Capture compile_commands.json
@@ -50,8 +50,8 @@ jobs:
           find C++/build1/ -name compile_commands.json -exec cp {} . \;
           cat compile_commands.json
 
-      - name: List Current Directory
-        run: ls
+      - name: List Build Directory After Find
+        run: ls C++/build1/
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
