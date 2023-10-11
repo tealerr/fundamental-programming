@@ -49,10 +49,10 @@ jobs:
             -Dsonar.projectKey=tealerr_fundamental-programming
             -Dsonar.organization=tealerr
             -Dsonar.sources=C++
-            -Dsonar.cfamily.build-wrapper-output.bypass=true
             -Dsonar.cfamily.compile-commands=build/compile_commands.json
             -Dsonar.exclusions=**/*.java
           #-Dsonar.cfamily.build-wrapper-output=bw-output
+          #-Dsonar.cfamily.build-wrapper-output.bypass=true
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
