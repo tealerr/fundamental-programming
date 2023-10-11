@@ -23,12 +23,12 @@ jobs:
           mkdir -p /github/workspace/bw-output
           chmod +x build-wrapper-linux-x86-64/build-wrapper-linux-x86-64
 
-      - name: Install CMake
+      - name: Install build-wrapper
         run: |
-          sudo apt-get update
-          sudo apt-get install -y software-properties-common
-          sudo add-apt-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
-          sudo apt-get install -y cmake
+          wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
+          unzip build-wrapper-linux-x86.zip
+          mkdir -p ./bw-output
+          chmod +x build-wrapper-linux-x86-64/build-wrapper-linux-x86-64
 
       - name: Configure
         run: |
