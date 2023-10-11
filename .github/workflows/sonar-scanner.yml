@@ -23,22 +23,16 @@ jobs:
           mkdir -p bw-output
           chmod +x build-wrapper-linux-x86/build-wrapper-linux-x86-64
 
-      - name: Configure
+      - name: Configure and Build
         run: |
-          mkdir -p C++/build1
           cd C++/build1
           cmake ..
-
-      - name: Verify CMakeCache.txt
-        run: ls C++/build1/CMakeCache.txt
+          make
 
       - name: Run build-wrapper
         run: |
           cd C++/build1
           ../../build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir ../../bw-output make
-
-      - name: Debug Directory Contents
-        run: ls -R C++
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
