@@ -37,6 +37,9 @@ jobs:
           cd C++/build1
           ../../build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir ../../bw-output make
 
+      - name: Debug Directory Contents
+        run: ls -R C++
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         with:
