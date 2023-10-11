@@ -29,37 +29,18 @@ jobs:
       - name: Create Build Directory
         run: mkdir -p C++/build1/
 
-      - name: Configure and Build
+      - name: Configure
         run: |
           cd C++/build1/
           cmake ..
-          make
 
-      - name: Verify compile_commands.json existence
+      - name: Run build-wrapper
         run: |
-          find C++/build1/ -name compile_commands.json -exec echo "File found: {}" \;
-
-      - name: Copy compile_commands.json
-        run: |
-          find C++/build1/ -name compile_commands.json -exec cp {} . \;
-
-      - name: Verify build-wrapper-dump.json existence
-        run: |
-          find $GITHUB_WORKSPACE -name build-wrapper-dump.json -exec echo "File found: {}" \;
-
-      - name: Copy build-wrapper-dump.json
-        run: |
-          find $GITHUB_WORKSPACE -name build-wrapper-dump.json -exec cp {} bw-output/ \;
+          cd C++/build1/
+          ../../build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir ../../bw-output make
 
       - name: List Build Directory
         run: ls C++/build1/
-
-      - name: List bw-output Directory
-        run: ls bw-output/
-
-      - name: Debug Output
-        run: |
-          find bw-output/
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
