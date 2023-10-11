@@ -50,6 +50,8 @@ jobs:
             -Dsonar.organization=tealerr
             -Dsonar.sources=C++
             -Dsonar.cfamily.build-wrapper-output=bw-output
+            -Dsonar.cfamily.build-wrapper-output.bypass=true
+            -Dsonar.cfamily.compile-commands=compile_commands.json
             -Dsonar.exclusions=**/*.java
 
         env:
