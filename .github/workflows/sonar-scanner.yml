@@ -40,10 +40,10 @@ jobs:
         run: ls C++/build1/CMakeCache.txt
 
       - name: Create Output Directory
-        run: mkdir -p /github/workspace/bw-output
+        run: mkdir -p $HOME/bw-output
 
       - name: Run build-wrapper
-        run: C++/build1/build-wrapper-linux-x86-64 --out-dir /github/workspace/bw-output /usr/bin/cmake --build /github/workspace/C++/build1
+        run: C++/build1/build-wrapper-linux-x86-64 --out-dir $HOME/bw-output /usr/bin/cmake --build C++/build1
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
@@ -52,7 +52,7 @@ jobs:
             -Dsonar.projectKey=tealerr_fundamental-programming
             -Dsonar.organization=tealerr
             -Dsonar.sources=C++
-            -Dsonar.cfamily.build-wrapper-output=bw-output
+            -Dsonar.cfamily.build-wrapper-output=$HOME/bw-output
             -Dsonar.exclusions=**/*.java
 
         env:
