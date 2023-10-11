@@ -43,8 +43,19 @@ jobs:
         run: |
           find C++/build1/ -name compile_commands.json -exec cp {} . \;
 
+      - name: Verify build-wrapper-dump.json existence
+        run: |
+          find /github/workspace/ -name build-wrapper-dump.json -exec echo "File found: {}" \;
+
+      - name: Copy build-wrapper-dump.json
+        run: |
+          find /github/workspace/ -name build-wrapper-dump.json -exec cp {} bw-output/ \;
+
       - name: List Build Directory
         run: ls C++/build1/
+
+      - name: List bw-output Directory
+        run: ls bw-output/
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
@@ -54,7 +65,6 @@ jobs:
             -Dsonar.organization=tealerr
             -Dsonar.sources=C++
             -Dsonar.cfamily.build-wrapper-output=bw-output
-            -Dsonar.cfamily.build-wrapper-output.bypass=true
             -Dsonar.exclusions=**/*.java
 
         env:
