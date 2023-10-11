@@ -21,7 +21,7 @@ jobs:
           wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
           unzip build-wrapper-linux-x86.zip
           mkdir -p /github/workspace/bw-output
-          chmod +x build-wrapper-linux-x86/build-wrapper-linux-x86-64
+          chmod +x build-wrapper-linux-x86-64/build-wrapper-linux-x86-64
 
       - name: Install CMake
         run: |
@@ -43,7 +43,7 @@ jobs:
       - name: Run build-wrapper
         run: |
           cd C++/build1/
-          /github/workspace/build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir /github/workspace/bw-output make
+          /github/workspace/build-wrapper-linux-x86-64/build-wrapper-linux-x86-64 --out-dir /github/workspace/bw-output make
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
