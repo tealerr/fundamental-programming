@@ -6,6 +6,12 @@ enable_testing()
 
 add_executable(myCmakeCpp main.cpp condition.cpp)
 
+# Add a target for building
+add_custom_target(build-all
+    COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR}
+    COMMENT "Building all targets"
+)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)

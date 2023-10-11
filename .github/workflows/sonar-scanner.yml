@@ -28,6 +28,10 @@ jobs:
           mkdir -p C++/build1
           cd C++/build1
 
+          # Assuming CMakeLists.txt is in the root of your project
+          cmake ..
+
+          # Invoke build-wrapper before the actual build
           ../../build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir ../../bw-output make
 
       - name: SonarCloud Scan
