@@ -24,10 +24,9 @@ jobs:
 
       - name: Install SonarQube plugins (SonarClojure)
         run: |
-          wget -O /opt/sonarqube/extensions/plugins/sonar-clojure-plugin.jar \
+          wget -O /opt/sonarqube/extensions/plugins/sonar-clojure-plugin.jar
             https://github.com/belhefner/sonar-clojure/releases/latest/download/sonar-clojure-plugin.jar
 
-          # Restart SonarQube (replace with the actual command to restart your SonarQube server)
           systemctl restart sonarqube
 
       - name: Build Clojure project
@@ -36,10 +35,10 @@ jobs:
 
       - name: Run SonarCloud analysis
         run: |
-          sonar-scanner \
+          sonar-scanner
             -Dsonar.projectKey=tealerr_fundamental-programming
             -Dsonar.organization=tealerr
-            -Dsonar.projectName=YourProjectName
+            -Dsonar.projectName=fundamental-programming
             -Dsonar.projectVersion=1.0
             -Dsonar.sources=.
         env:
