@@ -31,7 +31,11 @@ jobs:
 
           mv /opt/sonarqube/extensions/plugins/sonar-clojure-2.2.0 /opt/sonarqube/extensions/plugins/sonar-clojure-plugin
 
-          sudo systemctl restart sonarqube
+          if systemctl list-unit-files | grep -q sonarqube.service; then
+            sudo systemctl restart sonarqube
+          else
+            echo "SonarQube service not found. Please restart the service manually."
+          fi
 
       - name: Build Clojure project
         run: lein uberjar
