@@ -16,31 +16,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install build-wrapper
-        run: |
-          wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
-          unzip build-wrapper-linux-x86.zip
-          mkdir -p bw-output
-          chmod +x build-wrapper-linux-x86/build-wrapper-linux-x86-64
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: "adopt"
+          java-version: "11"
 
-      - name: Clean Build Directory
-        run: rm -rf C++/build1/
-
-      - name: Create Build Directory
-        run: mkdir -p C++/build1/
-
-      - name: Configure
-        run: |
-          cd C++/build1/
-          cmake ..
-
-      - name: Run build-wrapper
-        run: |
-          cd C++/build1/
-          ../../build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir ../../bw-output make
-
-      - name: List Build Directory
-        run: ls C++/build1/
+      - name: Build Clojure project
+        run: lein uberjar
+        working-directory: Clojure
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
@@ -48,10 +32,9 @@ jobs:
           args: >
             -Dsonar.projectKey=tealerr_fundamental-programming
             -Dsonar.organization=tealerr
-            -Dsonar.sources=C++
-            -Dsonar.cfamily.build-wrapper-output.bypass=true
-            -Dsonar.cfamily.compile-commands=build/compile_commands.json
             -Dsonar.exclusions=**/*.java
+            -Dsonar.sources=.
+            -Dsonar.language=clojure
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
