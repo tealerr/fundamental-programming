@@ -42,11 +42,11 @@ jobs:
         working-directory: Clojure
 
       - name: Run SonarCloud analysis
-        run: sonar-scanner \
-          -Dsonar.projectKey=tealerr_fundamental-programming \
-          -Dsonar.organization=tealerr \
-          -Dsonar.projectName=fundamental-programming \
-          -Dsonar.projectVersion=1.0 \
+        run: sonar-scanner
+          -Dsonar.projectKey=tealerr_fundamental-programming
+          -Dsonar.organization=tealerr
+          -Dsonar.projectName=fundamental-programming
+          -Dsonar.projectVersion=1.0
           -Dsonar.sources=.
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
