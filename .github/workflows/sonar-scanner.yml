@@ -1,4 +1,4 @@
-name: SonarCloud
+name: SonarCloud Scan
 
 on:
   push:
@@ -22,23 +22,25 @@ jobs:
           distribution: "adopt"
           java-version: "11"
 
+      - name: Install SonarQube plugins (SonarClojure)
+        run: |
+          wget -O /opt/sonarqube/extensions/plugins/sonar-clojure-plugin.jar \
+            https://github.com/belhefner/sonar-clojure/releases/latest/download/sonar-clojure-plugin.jar
+
+          systemctl restart sonarqube
+
       - name: Build Clojure project
         run: lein uberjar
         working-directory: Clojure
 
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        with:
-          args: >
+      - name: Run SonarCloud analysis
+        run: |
+          sonar-scanner \
             -Dsonar.projectKey=tealerr_fundamental-programming
             -Dsonar.organization=tealerr
-            -Dsonar.exclusions=**/*.java
+            -Dsonar.projectName=YourProjectName
+            -Dsonar.projectVersion=1.0
             -Dsonar.sources=.
-            -Dsonar.language=clojure
-            -Dsonar.c.file.suffixes=-
-            -Dsonar.cpp.file.suffixes=-
-            -Dsonar.objc.file.suffixes=-
-
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
