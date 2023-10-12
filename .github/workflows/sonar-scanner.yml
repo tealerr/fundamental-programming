@@ -35,6 +35,9 @@ jobs:
             -Dsonar.exclusions=**/*.java
             -Dsonar.sources=.
             -Dsonar.language=clojure
+            -Dsonar.c.file.suffixes=-
+            -Dsonar.cpp.file.suffixes=-
+            -Dsonar.objc.file.suffixes=-
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
