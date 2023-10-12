@@ -26,8 +26,10 @@ jobs:
         run: |
           sudo mkdir -p /opt/sonarqube/extensions/plugins/
 
-          wget -O /opt/sonarqube/extensions/plugins/sonar-clojure-plugin.jar \
-            https://github.com/belhefner/sonar-clojure/releases/download/latest/sonar-clojure-plugin.jar
+          wget https://github.com/fsantiag/sonar-clojure/archive/refs/tags/v2.2.0.zip
+          unzip v2.2.0.zip -d /opt/sonarqube/extensions/plugins/
+
+          mv /opt/sonarqube/extensions/plugins/sonar-clojure-2.2.0 /opt/sonarqube/extensions/plugins/sonar-clojure-plugin
 
           sudo systemctl restart sonarqube
 
