@@ -49,7 +49,7 @@ jobs:
             -Dsonar.organization=tealerr
             -Dsonar.projectName=fundamental-programming
             -Dsonar.projectVersion=1.0
-            -Dsonar.sources=.
+            -Dsonar.sources=.,Clojure/
             -Dsonar.clojure.eastwood.enabled=true
             -Dsonar.clojure.kibit.enabled=true
             -Dsonar.clojure.kondo.enabled=true
