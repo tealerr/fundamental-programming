@@ -27,6 +27,7 @@ jobs:
           wget -O /opt/sonarqube/extensions/plugins/sonar-clojure-plugin.jar \
             https://github.com/belhefner/sonar-clojure/releases/latest/download/sonar-clojure-plugin.jar
 
+          # Restart SonarQube (replace with the actual command to restart your SonarQube server)
           systemctl restart sonarqube
 
       - name: Build Clojure project
