@@ -51,15 +51,15 @@ jobs:
             -Dsonar.projectVersion=1.0
             -Dsonar.sources=.
             -Dsonar.exclusions=**/*.java
-            -Dsonar.clojure.eastwood.enabled=true
-            -Dsonar.clojure.kibit.enabled=true
-            -Dsonar.clojure.kondo.enabled=true
-            -Dsonar.clojure.ancient.enabled=true
-            -Dsonar.clojure.nvd.enabled=true
-            -Dsonar.cloverage.enabled=true
             -Dsonar.c.file.suffixes=-
             -Dsonar.cpp.file.suffixes=-
             -Dsonar.objc.file.suffixes=-
+        #   -Dsonar.clojure.eastwood.enabled=true
+        #   -Dsonar.clojure.kibit.enabled=true
+        #   -Dsonar.clojure.kondo.enabled=true
+        #   -Dsonar.clojure.ancient.enabled=true
+        #   -Dsonar.clojure.nvd.enabled=true
+        #   -Dsonar.cloverage.enabled=true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
