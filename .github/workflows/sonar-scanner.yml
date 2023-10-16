@@ -54,6 +54,7 @@ jobs:
             -Dsonar.c.file.suffixes=-
             -Dsonar.cpp.file.suffixes=-
             -Dsonar.objc.file.suffixes=-
+            -Dsonar.clojure.file.suffixes=.clj
         #   -Dsonar.clojure.eastwood.enabled=true
         #   -Dsonar.clojure.kibit.enabled=true
         #   -Dsonar.clojure.kondo.enabled=true
