@@ -57,7 +57,6 @@ jobs:
             -Dsonar.clojure.ancient.enabled=true
             -Dsonar.clojure.nvd.enabled=true
             -Dsonar.cloverage.enabled=true
-            -Dsonar.clojure.file.suffixes=.clj,.cljs,.cljc
             -Dsonar.c.file.suffixes=-
             -Dsonar.cpp.file.suffixes=-
             -Dsonar.objc.file.suffixes=-
